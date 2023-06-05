@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 //ideas: update the home page to have an image carousel, have a historic pictures showcase, new about us section with large stats/awards details, bulletin section with news/postings
+//collage wall that uses adobe api to fill a little panel with random pictures. if error, just display default pictures
 
-export default class Emailsignup extends Component{
+export default class EmailSignup extends Component{
     constructor(props){
         super(props)
         this.state = {
