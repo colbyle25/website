@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.tab-content{
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--off-white);
+}
+
+.navbar{
+    background-color: black;
+}
