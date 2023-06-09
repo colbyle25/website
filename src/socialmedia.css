@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.paragraph{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+}
+
+.icon{
+    font-size: 1.5em;
+    margin-right: 1%;
+}

@@ -7,7 +7,7 @@
 .parent{
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 80%;
     background-color: var(--off-white);
     border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #0038A8 66%, #FFFF00 100%) 1;
     /*(alternate) border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #FFFF00 67%, #FFFFFF 100%) 1;*/
@@ -28,6 +28,15 @@
     text-align: center;
 }
 
+.social_heading{
+    font-family: 'Playfair Display';
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
 .paragraph{
     font-family: 'Open Sans';
     font-size: 1.5em;
@@ -45,4 +54,8 @@
 .caret{
     margin-left: 1%;
     font-size: 1.2em;
+}
+
+.social_media{
+    margin-top: 5%;
 }

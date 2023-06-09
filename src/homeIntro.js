@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import './homeIntro.css'
+import SocialMedia from './socialmedia';
 
 export default class Introduction extends Component{
 
@@ -26,7 +27,16 @@ export default class Introduction extends Component{
             {text: "Read about OYFA's heritage and mission", link:''},
             {text: 'View the latest events ', link:''},
             {text: 'Meet ' + numOfBnCs + append + ' Board and Council', link:''}
-        ]   
+        ]
+
+        const handles = [
+            {socialHandle: 'oyfaatuva', icon:'fa-facebook'},
+            {socialHandle: '@oyfatuva', icon:'fa-instagram'},
+            {socialHandle: '@uvaOYFA', icon:'fa-youtube'},
+            {socialHandle: '@oyfatuva', icon:'fa-twitter'}
+        ]
+
+        const numOfSocialMediaColumns = handles.length - 1;
 
         return(
             <div className = 'parent'>
@@ -44,7 +54,10 @@ export default class Introduction extends Component{
                         <Link text={item.text} link={item.link} key={index}/>
                     ))}
                 </div>
-                {/* add facebook instagram stuff */}
+                {/* add ylona post? */}
+                {/* refer to socialmedia.js for documentation */}
+                <h2 className = 'social_heading'>Come visit us on our socials!</h2>
+                <SocialMedia handles = {handles}  numColumns = {numOfSocialMediaColumns}/>
             </div>
         )
     }
