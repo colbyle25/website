@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import EmailSignup from './emailsignup';
-import TitleScreen from './title';
-import Navbar from './navbar';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+
+import Navbar from './navbar';
+import TitleScreen from './title';
+import Introduction from './homeIntro';
+import EmailSignup from './emailsignup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +14,7 @@ root.render(
     {/*<EmailSignup />*/}
     <Navbar />
     <TitleScreen />
+    <Introduction />
   </React.StrictMode>
 );
 

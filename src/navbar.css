@@ -4,10 +4,16 @@
     --off-white: #e8e5e0;
 }
 
+.logo{
+    margin-left: 2%;
+    width: 5%;
+    alt: 'Oyfa Logo';
+}
+
 .tab-content{
     font-family: 'Playfair Display';
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2em;
     color: var(--off-white);
 }
 

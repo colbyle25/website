@@ -72,8 +72,7 @@ class TitleCarousel extends Component{
                         <CarouselContent
                             imgSrc={item.imgSrc}
                             captionHeader={item.captionHeader}
-                            captionPara={item.captionPara}
-                        />
+                            captionPara={item.captionPara}/>
                     </Carousel.Item>
                 ))}
             </Carousel>

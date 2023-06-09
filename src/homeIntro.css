@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.parent{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: var(--off-white);
+    border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #0038A8 66%, #FFFF00 100%) 1;
+    /*(alternate) border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #FFFF00 67%, #FFFFFF 100%) 1;*/
+    border-width: .8em;
+    border-style: solid;
+}
+
+.paragraph-container{
+    transform: translate(30%, 0);
+    width: 60%;
+}
+
+.heading{
+    font-family: 'Playfair Display';
+    font-size: 6em;
+    font-weight: bold;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.paragraph{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.link{
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+}
+
+.caret{
+    margin-left: 1%;
+    font-size: 1.2em;
+}

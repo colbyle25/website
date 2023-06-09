@@ -21,7 +21,7 @@
 .title{
     font-family: 'Playfair Display';
     font-weight: bold;
-    font-size: 120px;
+    font-size: 8em;
     text-align: left;
     color: var(--off-white);
 }
@@ -29,7 +29,7 @@
 /* force position for the caption */
 .caption{
     position: absolute;
-    top: 78%;
+    top: 77%;
     transform: translateY(-20%);
 }
 
@@ -37,7 +37,7 @@
 .caption-header{
     font-family: 'Playfair Display';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5em;
     color: var(--off-white);
 }
 
@@ -45,6 +45,6 @@
 .caption-paragraph{
     font-family: 'Open Sans';
     font-style: italic;
-    font-size: 18px;
+    font-size: 1.2em;
     color: var(--off-white);
 }
