@@ -7,6 +7,8 @@ import Navbar from './navbar';
 import TitleScreen from './title';
 import Introduction from './homeIntro';
 import EmailSignup from './emailsignup';
+import SocialMedia from './socialmedia';
+import Footer from './footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,7 @@ root.render(
     <Navbar />
     <TitleScreen />
     <Introduction />
+    <Footer />
   </React.StrictMode>
 );
 

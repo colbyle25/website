@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+.label{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 1em;
+}
+
+.input{
+    font-family: 'Open Sans';
+}

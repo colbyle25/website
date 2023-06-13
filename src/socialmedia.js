@@ -42,11 +42,13 @@ export default class SocialMedia extends Component{
         */
 
         return(
+            <div className>
             <div className = 'row'>
                 {handles.map((item, index) => (
                     <SocialHandle socialHandle={item.socialHandle} iconName={item.icon}
-                     numColumns = {numColumns} key={index}/>
+                    link={item.link} numColumns = {numColumns}key={index}/>
                 ))}
+            </div>
             </div>
         )
     }
@@ -58,15 +60,18 @@ class SocialHandle extends Component{
         const socialHandle = this.props.socialHandle
         const iconName = this.props.iconName
         const numColumns = this.props.numColumns
+        const link = this.props.link
 
         return(
             <div className = {'col-md-' + numColumns}>
-                <p className='paragraph'>
-                    <span>
-                        <FontAwesomeIcon icon={ 'fa-brands ' + iconName } className='icon' />
-                    </span>
-                    {socialHandle}
-                 </p>
+                <a href={link} target='_blank' class='a'>
+                    <p className='paragraph'>
+                        <span>
+                            <FontAwesomeIcon icon={ 'fa-brands ' + iconName } className='icon' />
+                        </span>
+                        {socialHandle}
+                    </p>
+                 </a>
             </div>
         )
     }

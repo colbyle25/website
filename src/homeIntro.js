@@ -9,11 +9,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import './homeIntro.css'
 import SocialMedia from './socialmedia';
+import HomeGetInvolved from './homeGetInvolved';
 
 export default class Introduction extends Component{
 
     render(){     
-        //JS Date is calculated by years since 1900...
+        //JS Date is calculated by years since 1900... what?
         //1988 = 88 years after
         //is it after April? increment the year
         const date = new Date()
@@ -30,10 +31,10 @@ export default class Introduction extends Component{
         ]
 
         const handles = [
-            {socialHandle: 'oyfaatuva', icon:'fa-facebook'},
-            {socialHandle: '@oyfatuva', icon:'fa-instagram'},
-            {socialHandle: '@uvaOYFA', icon:'fa-youtube'},
-            {socialHandle: '@oyfatuva', icon:'fa-twitter'}
+            {socialHandle: '@oyfaatuva', icon:'fa-facebook', link:'https://www.facebook.com/groups/oyfaatuva/'},
+            {socialHandle: '@oyfatuva', icon:'fa-instagram', link:'https://www.instagram.com/oyfaatuva/'},
+            {socialHandle: '@uvaOYFA', icon:'fa-youtube', link:'https://www.youtube.com/user/uvaOYFA'},
+            {socialHandle: '@oyfatuva', icon:'fa-twitter', link: 'https://twitter.com/oyfaatuva'}
         ]
 
         const numOfSocialMediaColumns = handles.length - 1;
@@ -49,15 +50,21 @@ export default class Introduction extends Component{
                      for all those who are any part Young, Filipino, and American, or not at all.
                     </p>
                 </div>
-                <div class = 'row'>
+                <div class = 'row links_container'>
                     {links.map((item, index) => (
                         <Link text={item.text} link={item.link} key={index}/>
                     ))}
                 </div>
                 {/* add ylona post? */}
                 {/* refer to socialmedia.js for documentation */}
-                <h2 className = 'social_heading'>Come visit us on our socials!</h2>
-                <SocialMedia handles = {handles}  numColumns = {numOfSocialMediaColumns}/>
+                <h2 className = 'social_heading'>How Can I get Involved?</h2>
+
+                
+                {/* <div class = 'social_media_parent'> */}
+                {/*    <SocialMedia handles = {handles} numColumns = {numOfSocialMediaColumns}/> */}
+                {/* </div> */}
+                
+                <HomeGetInvolved/>
             </div>
         )
     }

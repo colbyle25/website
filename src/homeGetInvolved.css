@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+.div{
+    text-align: center;
+    margin-top: 5%;
+    border-right: .1em;
+    border-left: 0em;
+    border-top: 0em;
+    border-bottom: 0em;
+    border-color: black;
+    border-style: solid;
+}
+
+.h1{
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.h3{
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+}

@@ -1,47 +1,60 @@
-import React, {Component} from 'react'
+import React, {useState, Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import './emailsignup.css'
+import jsonp from 'jsonp'
 
 //ideas: update the home page to have an image carousel, have a historic pictures showcase, new about us section with large stats/awards details, bulletin section with news/postings
 //collage wall that uses adobe api to fill a little panel with random pictures. if error, just display default pictures
 
-export default class EmailSignup extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            emailInput: ''
-        }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-    }
-    handleChange(event){
-        this.setState({
-            emailInput: event.target.value
-        })
-    }
-    handleSubmit(event){ // adding behavior later. should add email to WIO mailing list
-        event.preventDefault()
-        alert('Check your email every Sunday for the WIO!' + this.state.emailInput)
-        
-    }
-    render(){
+function EmailSignup(){
+    const [email, setEmail] = useState('');
+
+    const onSubmit = e => {
+        e.preventDefault();
+        const url = "https://oyfaatuva.us4.list-manage.com/subscribe/post-json?u=06c31be345165e241d2affc73&amp;id=11be915f14&amp;f_id=00ad07e9f0";
+        jsonp(`${url}&EMAIL=${email}`, { param: 'c' }, (_, data) => {
+            const { msg, result } = data
+            alert(msg)
+        });
+    };
+
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}> {/* call handleSubmit upon submit button pressed */}
-                    <div className = 'row'>
-                        <div className = 'col-md-2'>
-                            <label>Subscribe to This Week in OYFA (WIO)!</label>
-                        </div>
-                        <div className = 'col-md-2'>
-                            <input type = 'email' value={this.state.emailInput} onChange = {this.handleChange}/> {/* textField updates state variable upon change . add width to style later */}
-                            <button type = 'submit' name = 'submitBtn' className = 'btn btn-primary'>
-                                Submit{' '}<FontAwesomeIcon icon={faEnvelope}/> {/* submit button with an icon spanning. {' '} is to create a whitespace for a little distance between text and icon */}
-                            </button>
-                        </div>
+            <section className="">
+            <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
+            name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                {/* Start grid row */}
+                <div className="row">
+                {/* start grid column */}
+                <div className="col-4">
+                    <p className='label'>
+                    Sign up for our newsletter: This Week in OYFA (WIO)
+                    </p>
+                </div>
+                {/* end Grid column */}
+
+                {/* start grid column */}
+                <div className="col-md-6">
+                    {/* Email input */ }
+                    <div className="form-outline form-white">
+                    <input type='email' name="EMAIL" value={email} id='mce-EMAIL' onChange={e=> setEmail(e.target.value)}
+                    placeholder = 'Email Address' className="form-control" required />
                     </div>
+                </div>
+                {/* end grid column */}
+
+                {/* start grid column */}
+                <div className="col-md-2">
+                    {/* Submit button */}
+                    <button type="submit" className="btn btn-outline-dark">
+                    Subscribe
+                    </button>
+                </div>
+                {/* end grid column */}
+                </div>
+                {/* end grid row */}
                 </form>
-            </div>
-        )    
-    }
+            </section>
+        )
 }
+
+export default EmailSignup
