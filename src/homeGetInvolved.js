@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './homeGetInvolved.css'
 import SocialMedia from './socialmedia'
+import YoutubeEmbed from './youtubeEmbed'
 
 export default class HomeGetInvolved extends Component{
 
@@ -28,6 +29,7 @@ export default class HomeGetInvolved extends Component{
                 </div>
                 <div className = 'col div'>
                     <SocialMedia handles={handles} numColumns={numOfSocialMediaColumns}/>
+                    <YoutubeEmbed embedId="2vajWORwINE" />
                 </div>
             </div>
         )
