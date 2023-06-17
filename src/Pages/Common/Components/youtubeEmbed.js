@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import './youtubeEmbed.css'
+import '../Stylesheets/youtubeEmbed.css'
+
+/*
+** visit the youtube video you want to display, click share, click embed
+** then fill out the fields below accordingly
+** copy the embedID tag and call it as props from your parent component
+*/
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">

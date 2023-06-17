@@ -1,7 +1,7 @@
 import React, {useState, Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import './emailsignup.css'
 import jsonp from 'jsonp'
+import '../Stylesheets/emailsignup.css'
 
 //ideas: update the home page to have an image carousel, have a historic pictures showcase, new about us section with large stats/awards details, bulletin section with news/postings
 //collage wall that uses adobe api to fill a little panel with random pictures. if error, just display default pictures
@@ -19,15 +19,15 @@ function EmailSignup(){
     };
 
         return(
-            <section className="">
+            <section>
             <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
             name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 {/* Start grid row */}
                 <div className="row">
                 {/* start grid column */}
-                <div className="col-4">
-                    <p className='label'>
-                    Sign up for our newsletter: This Week in OYFA (WIO)
+                <div className="col-3">
+                    <p className='email_label'>
+                    Subscribe to This Week in OYFA (WIO)
                     </p>
                 </div>
                 {/* end Grid column */}
@@ -37,7 +37,7 @@ function EmailSignup(){
                     {/* Email input */ }
                     <div className="form-outline form-white">
                     <input type='email' name="EMAIL" value={email} id='mce-EMAIL' onChange={e=> setEmail(e.target.value)}
-                    placeholder = 'Email Address' className="form-control" required />
+                    placeholder = 'Email Address' className="form-control email_input" required />
                     </div>
                 </div>
                 {/* end grid column */}

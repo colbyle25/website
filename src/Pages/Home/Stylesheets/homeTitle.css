@@ -5,12 +5,17 @@
 }
 
 /* dimming the carousel images to make the title pop, depending on the pictures you choose you may want to change this*/
-.img{
-    filter: brightness(75%)
+.title_img{
+    filter: brightness(75%);
 }
 
+.title_img_container{
+    width: 100vh;
+    max-height: 93vh;
+  }
+
 /* force position of the div holding the title */
-.title-parent{
+.title_parent{
     position: absolute;
     left: 5%;
     top: 10%;
@@ -18,33 +23,39 @@
 }
 
 /* font for title h1 text */
-.title{
+.title_h1{
     font-family: 'Playfair Display';
     font-weight: bold;
-    font-size: 8em;
+    /*font-size: 8em;*/
+    font-size:12vh;
     text-align: left;
     color: var(--off-white);
 }
 
 /* force position for the caption */
-.caption{
+.title_caption{
     position: absolute;
-    top: 77%;
-    transform: translateY(-20%);
+    top: 75%;
 }
 
 /* font for the caption header */
-.caption-header{
+.title_caption_header{
     font-family: 'Playfair Display';
     font-weight: bold;
+    /*font-size: 1.5em;*/
     font-size: 1.5em;
     color: var(--off-white);
 }
 
 /* font for the caption text */
-.caption-paragraph{
+.title_caption_paragraph{
     font-family: 'Open Sans';
     font-style: italic;
     font-size: 1.2em;
     color: var(--off-white);
+}
+
+/* remove link underlining for the link */
+.title_link{
+    text-decoration: none;
 }

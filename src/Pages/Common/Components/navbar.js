@@ -10,7 +10,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Link } from 'react-router-dom';
-import './navbar.css'
+import '../Stylesheets/navbar.css'
 
 export default class Navbar extends Component {
     
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
         const content = ['--logo', 'About', 'Event', 'Links', 'Leadership', 'Archives']
 
         return (
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark navbar">
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark navbar_background">
                     {content.map((item, index) => (
                         <Tab name={item} key={index}/>
                     ))}
@@ -36,12 +36,12 @@ class Tab extends Component{
     render(){
         /* if props.name specified as '--logo', return the oyfa logo. otherwise return a text tab */
         const logoTab =
-            <img src="https://repository-images.githubusercontent.com/201129773/d6396d00-b9ce-11e9-8c01-299677f98593" className = 'logo'/>
+            <img src="https://repository-images.githubusercontent.com/201129773/d6396d00-b9ce-11e9-8c01-299677f98593" className = 'navbar_logo'/>
 
         const textTab = 
         <div>                
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item tab-content">{this.props.name}</li>
+                <li className="nav-item navbar_tab_content">{this.props.name}</li>
             </ul>
         </div>;
 

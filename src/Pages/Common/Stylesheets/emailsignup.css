@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
 
-.label{
+.email_label{
     text-align: center;
     font-family: 'Open Sans';
     font-size: 1em;
 }
 
-.input{
+.email_input{
     font-family: 'Open Sans';
 }

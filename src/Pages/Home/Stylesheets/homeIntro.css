@@ -4,42 +4,46 @@
     --off-white: #e8e5e0;
 }
 
-.parent{
+.intro_parent{
     position: relative;
     width: 100%;
     height: 80%;
     background-color: var(--off-white);
-    border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #0038A8 66%, #FFFF00 100%) 1;
+    /* this one below was cool but doesn't work but maybe you can tweak with it */
+    /* background-image: linear-gradient(#aec6ff 0%, var(--off-white) 25%); */
+    /*background-image: linear-gradient(to right, #ff5569 0%, var(--off-white) 20%, var(--off-white) 80%, #ffffb8 100%);*/
+    border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #051941 66%, #FFFF00 100%) 1;
     /*(alternate) border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #FFFF00 67%, #FFFFFF 100%) 1;*/
     border-width: .8em;
     border-style: solid;
     padding-bottom: 5%;
 }
 
-.links_container{
-    width: 80%;
+.intro_links_container{
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.intro_paragraph_container{
     transform: translate(10%, 0);
+    width: 80%;
 }
 
-.paragraph-container{
-    transform: translate(30%, 0);
-    width: 60%;
-}
-
-.social_media_parent{
+.intro_social_media_parent{
     width: 50%;
     transform: translate(50%, 0);
 }
 
-.heading{
+.intro_heading{
     font-family: 'Playfair Display';
     font-size: 6em;
     font-weight: bold;
-    margin-top: 3%;
+    margin-top: 6%;
+    margin-bottom: 3%;
     text-align: center;
 }
 
-.social_heading{
+.intro_get_involved_heading{
     font-family: 'Playfair Display';
     font-size: 4em;
     font-weight: bold;
@@ -48,21 +52,28 @@
     text-align: center;
 }
 
-.paragraph{
+.intro_paragraph{
     font-family: 'Open Sans';
     font-size: 1.5em;
     text-align: center;
     margin-top: 3%;
 }
 
-.link{
+.intro_link{
     margin-top: 5%;
     text-align: center;
     font-family: 'Open Sans';
     font-size: 1.5em;
 }
 
-.caret{
+.intro_caret{
     margin-left: 1%;
     font-size: 1.2em;
+}
+
+.intro_img{
+    transform: translate(20%, 0);
+    width: 70%;
+    height: 350px;
+    object-fit: cover;
 }

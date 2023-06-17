@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import './socialmedia.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons';
-
-import './homeIntro.css'
+import '../Stylesheets/socialmedia.css'
 
 export default class SocialMedia extends Component{
 
@@ -18,7 +16,6 @@ export default class SocialMedia extends Component{
         ** that you pass in as the icon field. If you leave the socialHandle field as '' (empty string),
         ** the icon will generate alone. This is useful for the footer, for example.
         */
-
 
         library.add(fab) //add all brand logos to the icon library for this file
 
@@ -42,7 +39,7 @@ export default class SocialMedia extends Component{
         */
 
         return(
-            <div className>
+            <div>
             <div className = 'row'>
                 {handles.map((item, index) => (
                     <SocialHandle socialHandle={item.socialHandle} iconName={item.icon}
@@ -64,10 +61,10 @@ class SocialHandle extends Component{
 
         return(
             <div className = {'col-md-' + numColumns}>
-                <a href={link} target='_blank' class='a'>
-                    <p className='paragraph'>
+                <a href={link} target='_blank' className='social_link'>
+                    <p className='social_paragraph'>
                         <span>
-                            <FontAwesomeIcon icon={ 'fa-brands ' + iconName } className='icon' />
+                            <FontAwesomeIcon icon={ 'fa-brands ' + iconName } className='social_icon' />
                         </span>
                         {socialHandle}
                     </p>

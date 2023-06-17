@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-.paragraph{
+.social_paragraph{
     font-family: 'Open Sans';
     font-size: 1.5em;
     text-align: center;
@@ -9,12 +9,12 @@
     align-items: center;
 }
 
-.icon{
+.social_icon{
     font-size: 1.2em;
     margin-right: 1%;
 }
 
-.a{
+.social_link{
     text-decoration: none;
     color: black;
 }

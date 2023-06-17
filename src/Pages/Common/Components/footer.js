@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import './footer.css'
 import SocialMedia from './socialmedia';
 import EmailSignup from './emailsignup';
+import '../Stylesheets/footer.css'
 
 export default class Footer extends Component{
 
@@ -20,13 +20,13 @@ export default class Footer extends Component{
 
         return(
             <footer className='text-muted footer'>
-            <section className="section">
+            <section className="footer_section">
                 <div>
                     <div className='row'>
-                        <div className='col-md-2 social_media_container'>
+                        <div className='col-md-4'>
                             <SocialMedia handles = {handles} numColumns = {numOfSocialMediaColumns}/>
                         </div>
-                        <div className='col-6'>
+                        <div className='col'>
                             <EmailSignup />
                         </div>
                     </div>
@@ -36,7 +36,7 @@ export default class Footer extends Component{
                 <div className="text-center">
                     <div className="row mt-3">
                         <div className="text-center">
-                            <p className = 'disclaimer'>
+                            <p className = 'footer_disclaimer'>
                                 Although this organization has members who are University of Virginia students 
                                 and may have University employees associated or engaged in its activities and affairs, 
                                 the organization is not a part of or an agency of the University. 
@@ -46,15 +46,15 @@ export default class Footer extends Component{
                                 acts or omissions.
                             </p>
 
-                            <p className = 'paragraph'>
+                            <p className = 'footer_paragraph'>
                                 Website created and maintained by OYFA Webmasters. Access code here.
                             </p>
 
-                            <p className = 'paragraph'>
+                            <p className = 'footer_paragraph'>
                                 Visit the previous website
                             </p>
                             
-                            <p className = 'paragraph'>
+                            <p className = 'footer_paragraph'>
                                 Copyright Organization of Young Filipino Americans ©{copyrightYear}. All Rights Reserved.
                             </p>
                         </div>

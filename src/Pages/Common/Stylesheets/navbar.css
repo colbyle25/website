@@ -4,19 +4,19 @@
     --off-white: #e8e5e0;
 }
 
-.logo{
+.navbar_logo{
     margin-left: 2%;
     width: 5%;
     alt: 'Oyfa Logo';
 }
 
-.tab-content{
+.navbar_tab_content{
     font-family: 'Playfair Display';
     font-weight: bold;
     font-size: 1.2em;
     color: var(--off-white);
 }
 
-.navbar{
+.navbar_background{
     background-color: black;
 }

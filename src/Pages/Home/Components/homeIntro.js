@@ -7,9 +7,8 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import './homeIntro.css'
-import SocialMedia from './socialmedia';
 import HomeGetInvolved from './homeGetInvolved';
+import '../Stylesheets/homeIntro.css'
 
 export default class Introduction extends Component{
 
@@ -40,26 +39,29 @@ export default class Introduction extends Component{
         const numOfSocialMediaColumns = handles.length - 1;
 
         return(
-            <div className = 'parent'>
-                <h1 className = 'heading'>Helloyfa!</h1>
-                <div className = 'paragraph-container'>
-                    <p className = 'paragraph'>
+            <div className = 'intro_parent'>
+                <h1 className = 'intro_heading'>Helloyfa!</h1>
+                <div className = 'intro_paragraph_container'>
+                    <p className = 'intro_paragraph'>
                     Since 1988, OYFA has been the University of Virginia's exclusive Filipino-American undergraduate CIO.
                     OYFA exists to engage all in cultural understanding through its yearly live Barrio performance,
                      positively impact the local community through acts of service and fundraising, and secure a space 
                      for all those who are any part Young, Filipino, and American, or not at all.
                     </p>
                 </div>
-                <div class = 'row links_container'>
+
+                {/* probably should have a picture here */}
+                <div class = 'row intro_links_container'>
                     {links.map((item, index) => (
                         <Link text={item.text} link={item.link} key={index}/>
                     ))}
                 </div>
+
+                <img src='http://www.oyfaatuva.com/images/Fieldday.jpg' className='intro_img'/>
                 {/* add ylona post? */}
                 {/* refer to socialmedia.js for documentation */}
-                <h2 className = 'social_heading'>How Can I get Involved?</h2>
+                <h2 className = 'intro_get_involved_heading'>How Can I get Involved?</h2>
 
-                
                 {/* <div class = 'social_media_parent'> */}
                 {/*    <SocialMedia handles = {handles} numColumns = {numOfSocialMediaColumns}/> */}
                 {/* </div> */}
@@ -81,10 +83,10 @@ class Link extends Component{
         const link = this.props.link
 
         return(
-            <div className='col-md-4 link-container'>
-                <p className = 'link'>
+            <div className='col-md-4 intro_links_container'>
+                <p className = 'intro_link'>
                     {text}
-                    <span><FontAwesomeIcon icon={faCaretRight} className='caret'/></span>
+                    <span><FontAwesomeIcon icon={faCaretRight} className='intro_caret'/></span>
                 </p>
             </div>
         )
