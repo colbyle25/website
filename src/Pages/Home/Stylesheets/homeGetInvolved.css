@@ -2,6 +2,7 @@
 
 .get_involved_border_div{
     text-align: center;
+    align-items: center;
     margin-top: 1%;
     border-right: .1em;
     border-left: 0em;
@@ -13,6 +14,7 @@
 
 .get_involved_div_no_border{
     text-align: center;
+    align-items: center;
     margin-top: 1%;
     border-right: .1em;
     border-left: 0em;
@@ -21,7 +23,7 @@
 }
 
 .get_involved_padding{
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .get_involved_h1{
@@ -44,10 +46,6 @@
     transform: translate(10%, 0);
 }
 
-.donation_img{
-    width: 580px;
-}
-
 .mark {
     background: transparent;
     background-image: linear-gradient(
@@ -59,3 +57,16 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
+
+.get_involved_img{
+    /*width: 580px;
+    height: 315px;*/
+    box-shadow: 1vh 1vh 1vh rgb(141, 141, 141);
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.get_involved_email{
+    align-items: center;
+}

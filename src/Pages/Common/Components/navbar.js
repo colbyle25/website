@@ -36,7 +36,7 @@ class Tab extends Component{
     render(){
         /* if props.name specified as '--logo', return the oyfa logo. otherwise return a text tab */
         const logoTab =
-            <img src="https://repository-images.githubusercontent.com/201129773/d6396d00-b9ce-11e9-8c01-299677f98593" className = 'navbar_logo'/>
+            <img src='./Images/Common/Navbar_OYFA_Logo.png' className = 'navbar_logo'/>
 
         const textTab = 
         <div>                

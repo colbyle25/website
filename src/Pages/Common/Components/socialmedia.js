@@ -9,8 +9,10 @@ export default class SocialMedia extends Component{
 
     render(){
         /* the calling convention to create a social media arrangement requires you to pass
-        ** a handles dictionary (such as the example commented below) from the calling class
-        ** as well as the number of col-md columns you want it to render to.
+        ** a handles dictionary (such as the example commented below) from the calling class.
+        ** Several common ones are available for you in src/Constants
+        **
+        ** You also need to pass the number of col-md columns you want it to render to.
         ** You have two options for how your icons look: in your handles dictionary, you can set
         ** a socialHandle field so that the account name appears to the right of the FontAwesome icon
         ** that you pass in as the icon field. If you leave the socialHandle field as '' (empty string),
@@ -21,7 +23,7 @@ export default class SocialMedia extends Component{
 
         const handles = this.props.handles
 
-        /*
+        /*    Example for defining handles dictionary with bottom socialHandle text
         **
         **    const handles = [
         **        {socialHandle: 'oyfaatuva', icon:'fa-facebook'},
@@ -33,8 +35,9 @@ export default class SocialMedia extends Component{
 
         const numColumns = this.props.numColumns
 
-        /*
-        **    numColumns = handles.length (just an example, you may want to try diff numbers for a grid or more/less space)
+        /*    Example for defining col-md class. You may want to try diff numbers for a grid or more/less space
+        **
+        **    numColumns = handles.length
         **    <SocialMedia handles = {handles} numColumns = {numColumns} />
         */
 

@@ -29,15 +29,6 @@ export default class Introduction extends Component{
             {text: 'Meet ' + numOfBnCs + append + ' Board and Council', link:''}
         ]
 
-        const handles = [
-            {socialHandle: '@oyfaatuva', icon:'fa-facebook', link:'https://www.facebook.com/groups/oyfaatuva/'},
-            {socialHandle: '@oyfatuva', icon:'fa-instagram', link:'https://www.instagram.com/oyfaatuva/'},
-            {socialHandle: '@uvaOYFA', icon:'fa-youtube', link:'https://www.youtube.com/user/uvaOYFA'},
-            {socialHandle: '@oyfatuva', icon:'fa-twitter', link: 'https://twitter.com/oyfaatuva'}
-        ]
-
-        const numOfSocialMediaColumns = handles.length - 1;
-
         return(
             <div className = 'intro_parent'>
                 <h1 className = 'intro_heading'>Helloyfa!</h1>
@@ -46,7 +37,9 @@ export default class Introduction extends Component{
                     Since 1988, OYFA has been the University of Virginia's exclusive Filipino-American undergraduate CIO.
                     OYFA exists to engage all in cultural understanding through its yearly live Barrio performance,
                      positively impact the local community through acts of service and fundraising, and secure a space 
-                     for all those who are any part Young, Filipino, and American, or not at all.
+                     for all those who are any part Young, Filipino, and American, or not at all. We engage our vast membership
+                     through dozens of annual events, including the Barrio Fiesta, our restaurant pop-up Filipino Food Night, 
+                     sports tournaments, and the OYFA Excellence Scholarship.
                     </p>
                 </div>
 
@@ -57,7 +50,9 @@ export default class Introduction extends Component{
                     ))}
                 </div>
 
-                <img src='http://www.oyfaatuva.com/images/Fieldday.jpg' className='intro_img'/>
+                <img 
+                    src='./Images/Home/Intro_Culturefest_Panorama.jpeg'
+                    className='intro_img'/>
                 {/* add ylona post? */}
                 {/* refer to socialmedia.js for documentation */}
                 <h2 className = 'intro_get_involved_heading'>How Can I get Involved?</h2>

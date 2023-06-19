@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.testimonies_parent{
+    background-color: #ecb534;
+    display: flex;
+    justify-content: center;
+    height: 92vh;
+}
+
+.testimonies_margins{
+    width: 80%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.testimonies_h1{
+    margin-bottom: 3%;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    font-size:8vh;
+    color: var(--off-white);
+}
+
+.testimonies_h2{
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size:6vh;
+    text-align: left;
+    color: var(--off-white);
+}
+
+.testimonies_year{
+    font-family: 'Open Sans';
+    padding-top: 1%;
+    font-size:3vh;
+    text-align: left;
+    color: var(--off-white);
+}
+
+.testimonies_p{
+    font-family: 'Open Sans';
+    margin-bottom: 7%;
+    font-size:3vh;
+    text-align: left;
+    color: var(--off-white);
+}

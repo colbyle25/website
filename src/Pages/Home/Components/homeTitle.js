@@ -3,6 +3,8 @@
 ** This code is very decomposed for your convinience, parent TitleScreen class renders a react-bootstrap
 ** carousel. Carousel uses Array.map to dynamically render Carousel.Items for each dictionary you pass as
 ** props in the content array. The parent class also renders a Title component.
+**
+** for API documentation on the react-bootstrap Carousel, visit https://react-bootstrap.netlify.app/docs/components/carousel/
 */
 
 import React, {Component} from 'react'
@@ -17,9 +19,11 @@ export default class TitleScreen extends Component{
         /* Carousel Variables */
         const timeBeforeSwitch = 5000 //time in milliseconds
         const content = [] //push more content in the following format to automatically add new slides as you see fit
+        const imgDir = './Images/Home/' //images for this file are in public/Images/Home
+        
         content.push(
             {
-                imgSrc: 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/84f1e3b9-ac85-4ac2-8dee-acb2c487b489_rw_1920.jpg?h=9a1c3e4034b553d54d0d54625700bbb7',
+                imgSrc: imgDir + 'Title_First_Year_Modern.jpeg',
                 captionHeader: '1st Year Modern, Barrio 2023',
                 captionPara: 'Watch the performance',
                 link: 'https://www.youtube.com/watch?v=zWFKvAuphp8&ab_channel=OYFAatUVA'
@@ -27,10 +31,10 @@ export default class TitleScreen extends Component{
         )
         content.push(
             {
-                imgSrc: 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/66963ab4-bced-4991-9de7-c5175a4c7fdf_rw_1920.jpg?h=d78d1cc1108de68c81fa482d1de3575f',
+                imgSrc: imgDir + 'Title_Fourth_Year_Modern.jpeg',
                 captionHeader: '4th Year Modern, Barrio 2023',
-                captionPara: 'View more pictures',
-                link: ''
+                captionPara: 'View more pictures'
+                //no link
             } 
         )        
         //continue as you see fit
@@ -68,7 +72,7 @@ class TitleCarousel extends Component{
         const content = this.props.content
 
         return(
-            <Carousel>
+            <Carousel fade={true} indicators={false} touch={true}>
                 {content.map((item, index) => (
                     <Carousel.Item interval={timeBeforeSwitch} key={index}>
                         <CarouselContent
@@ -96,7 +100,7 @@ class CarouselContent extends Component{
                 </div>
                 <Carousel.Caption className = 'title_caption'>
                 <h3 className = 'title_caption_header'>{this.props.captionHeader}</h3>
-                <a href = {this.props.link} className = 'title_link'>
+                <a href = {this.props.link} target='_blank' className = 'title_link'>
                     <p className = 'title_caption_paragraph'>{this.props.captionPara}</p>
                 </a>
                 </Carousel.Caption>
