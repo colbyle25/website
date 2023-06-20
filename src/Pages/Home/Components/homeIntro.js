@@ -1,10 +1,17 @@
 /***************************************************************************
-** this is the 2nd panel on the Home page, under the title/panorama/carousel
+** this is the 2nd panel on the Home page, under the title/panorama/carousel.
+** it is the main panel of the home page and has the multicolored bordering
+** There is a brief introduction paragraph, with a Link component, then a picture,
+** and then a header 'How Can I get Involved'. Then a seperate child component
+** homeGetInvolved is rendered
+**
+** uses React <Link> to About, Event, and Leadership page
 */
 
-//continue social media and social media description under the links
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import HomeGetInvolved from './homeGetInvolved';
@@ -23,13 +30,16 @@ export default class Introduction extends Component{
         else if(numOfBnCs % 10 == 2) append = 'nd'
         else if(numOfBnCs % 10 == 3) append = 'rd'
 
+        /* On this panel we have a row that links to internal pages, you can add a new link by editing this
+        ** dictionary here. Use a relative link that matches the router definitions in index */
         const links = [
-            {text: "Read about OYFA's heritage and mission", link:''},
-            {text: 'View the latest events ', link:''},
-            {text: 'Meet ' + numOfBnCs + append + ' Board and Council', link:''}
+            {text: "Read about OYFA's heritage and mission", link:'/About'},
+            {text: 'View the latest events ', link:'/Events'},
+            {text: 'Meet ' + numOfBnCs + append + ' Board and Council', link:'/Leadership'}
         ]
 
         return(
+            /* rendering the introduction header/paragraph */
             <div className = 'intro_parent'>
                 <h1 className = 'intro_heading'>Helloyfa!</h1>
                 <div className = 'intro_paragraph_container'>
@@ -43,46 +53,46 @@ export default class Introduction extends Component{
                     </p>
                 </div>
 
-                {/* probably should have a picture here */}
+                {/* rendering the links row */}
                 <div class = 'row intro_links_container'>
                     {links.map((item, index) => (
-                        <Link text={item.text} link={item.link} key={index}/>
+                        <PageLink text={item.text} link={item.link} key={index}/>
                     ))}
                 </div>
 
+                 {/* rendering the panorama img */}
                 <img 
                     src='./Images/Home/Intro_Culturefest_Panorama.jpeg'
                     className='intro_img'/>
-                {/* add ylona post? */}
-                {/* refer to socialmedia.js for documentation */}
+
+                {/* rendering the get involved header */}
                 <h2 className = 'intro_get_involved_heading'>How Can I get Involved?</h2>
 
-                {/* <div class = 'social_media_parent'> */}
-                {/*    <SocialMedia handles = {handles} numColumns = {numOfSocialMediaColumns}/> */}
-                {/* </div> */}
-                
+                {/* rendering the rest of the panel, check out the homeGetInvolved.js file */}
                 <HomeGetInvolved/>
             </div>
         )
     }
 }
 
-class Link extends Component{
+class PageLink extends Component{
     constructor(props){
         super(props)
     }
 
-    //remember to add in the links after
+    /* from props, render a 'text' label with a 'link'*/
     render(){
         const text = this.props.text
         const link = this.props.link
 
         return(
             <div className='col-md-4 intro_links_container'>
-                <p className = 'intro_link'>
-                    {text}
-                    <span><FontAwesomeIcon icon={faCaretRight} className='intro_caret'/></span>
-                </p>
+                <Link to={link} className = 'intro_react_link'>
+                    <p className = 'intro_link'>
+                        {text}
+                        <span><FontAwesomeIcon icon={faCaretRight} className='intro_caret'/></span>
+                    </p>
+                </Link>
             </div>
         )
     }

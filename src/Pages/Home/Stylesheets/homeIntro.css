@@ -59,6 +59,11 @@
     margin-top: 3%;
 }
 
+.intro_react_link{
+    text-decoration: none;
+    color:black;
+}
+
 .intro_link{
     margin-top: 5%;
     text-align: center;
@@ -76,5 +81,5 @@
     width: 80%;
     height: 400px;
     object-fit: cover;
-    box-shadow: 1vh 1vh 1vh rgb(141, 141, 141);
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(141, 141, 141);
 }

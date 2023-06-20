@@ -27,7 +27,7 @@ export default class Footer extends Component{
                     </div>
                 </section>
                 <section>
-                    <div className="text-center">
+                    <div>
                         <div className="row mt-3">
                             <div className="text-center">
                                 <p className = 'footer_disclaimer'>

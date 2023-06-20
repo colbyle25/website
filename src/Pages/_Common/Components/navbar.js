@@ -16,7 +16,7 @@ export default class Navbar extends Component {
     
     render() {
         /* for each item in this array, dynamically render a tab */
-        const content = ['--logo', 'About', 'Event', 'Links', 'Leadership', 'Archives']
+        const content = ['--logo', 'About', 'Events', 'Links', 'Leadership', 'Archives']
 
         return (
             <nav className="navbar sticky-top navbar-expand-lg navbar-dark navbar_background">
@@ -34,17 +34,21 @@ class Tab extends Component{
     }
     
     render(){
-        /* if props.name specified as '--logo', return the oyfa logo. otherwise return a text tab */
+        /* if props.name specified as '--logo', return the oyfa logo with link to Home page */
         const logoTab =
-            <img src='./Images/Common/Navbar_OYFA_Logo.png' className = 'navbar_logo'/>
+            <Link to='/' className='navbar_react_link'>
+                <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo' />
+            </Link>
 
+        /* if props.name specified as as a String, return a text tab with link to /{name} */
         const textTab = 
-        <div>                
+        <Link to={'/'+this.props.name} className='navbar_react_link'>                
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item navbar_tab_content">{this.props.name}</li>
             </ul>
-        </div>;
+        </Link>;
 
+        /* conditional logic to return logo or text tab */
         return(
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 {this.props.name == '--logo' ? logoTab : textTab} 

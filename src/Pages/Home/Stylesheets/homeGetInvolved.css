@@ -61,7 +61,7 @@
 .get_involved_img{
     /*width: 580px;
     height: 315px;*/
-    box-shadow: 1vh 1vh 1vh rgb(141, 141, 141);
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(141, 141, 141);
     width: 90%;
     height: 400px;
     object-fit: cover;

@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import SocialMedia from '../../Common/Components/socialmedia'
-import YoutubeEmbed from '../../Common/Components/youtubeEmbed'
-import {EmailSignupWithName} from '../../Common/Components/emailsignup'
+import SocialMedia from '../../_Common/Components/socialmedia'
+import YoutubeEmbed from '../../_Common/Components/youtubeEmbed'
+import {EmailSignupWithName} from '../../_Common/Components/emailsignup'
 import '../Stylesheets/homeGetInvolved.css'
 import * as Constants from '../../../Constants'
 
 /* ATTENTION: If you are performing yearly upkeep, you will want to change the venmo link
-** in this file to the current Treasurer...
+** in the src/Constants file to the current Treasurer...
 */
 
 /* Contains the three rows you see below the "How Can I get Involved" header 
