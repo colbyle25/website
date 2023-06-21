@@ -20,7 +20,7 @@ import '../Stylesheets/homeIntro.css'
 export default class Introduction extends Component{
 
     render(){     
-        //JS Date is calculated by years since 1900... what?
+        //JS Date is calculated by years since 1900... ????
         //1988 = 88 years after
         //is it after April? increment the year
         const date = new Date()
@@ -48,7 +48,7 @@ export default class Introduction extends Component{
                     OYFA exists to engage all in cultural understanding through its yearly live Barrio performance,
                      positively impact the local community through acts of service and fundraising, and secure a space 
                      for all those who are any part Young, Filipino, and American, or not at all. We engage our vast membership
-                     through dozens of annual events, including the Barrio Fiesta, our restaurant pop-up Filipino Food Night, 
+                     through dozens of annual events, including Barrio Fiesta, our restaurant pop-up Filipino Food Night, 
                      sports tournaments, and the OYFA Excellence Scholarship.
                     </p>
                 </div>
