@@ -11,7 +11,7 @@ export default class Events extends Component{
         return(
             <div>
                 <Navbar />
-                <HalfTitle header = 'Events' img = ''/>
+                <HalfTitle header = 'Events'/>
                 <Footer />
             </div>
         )

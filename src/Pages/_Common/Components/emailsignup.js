@@ -66,7 +66,7 @@ function EmailSignupWithName(){
  
     const onSubmit = e => {
         e.preventDefault()
-        const nameUrl = `${MAILCHIMP_BASE_URL}&EMAIL=${email}&FNAME=${fName}&LNAME=${lName}`
+        const nameUrl = `${MAILCHIMP_BASE_URL}&EMAIL=${email}&FNAME=${fName}&LNAME=${lName}&TAG=`
         jsonp(nameUrl, { param: 'c' }, (_, data) => {
             const { msg, result } = data
             alert('Check Your Email!')

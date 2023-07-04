@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.history_background{
+    background-color: var(--off-white);
+}
+
+.history_heading{
+    font-family: 'Playfair Display';
+    padding-top: 3%;
+    margin-bottom: 4%;
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.history_text{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.history_quote_parent{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.history_quotation1{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 10em;
+    font-weight: bold;
+    margin-bottom: -6%;
+    margin-left: -7%;
+}
+
+.history_quotation2{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 10em;
+    margin-left: 100%;
+    margin-top: -6%;
+    font-weight: bold;
+}
+
+.history_quote{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.history_quote_author{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    text-align: right;
+    margin-top: -6%;
+    margin-bottom: 0%;
+    text-align: center;
+}
+
+.history_bold{
+    font-family: 'Open San';
+}
+
+.history_img_parent{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.history_img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 10%;
+}
+
+.award_img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-top: 10%;
+    margin-bottom: 15vh;
+}
