@@ -20,11 +20,11 @@
     object-fit:cover;
 }
 
-.half_title_paragraph{
+.half_title_caption{
     position: absolute;
     font-family: 'Playfair Display';
     font-size: 3em;
-    top: 30%;
+    bottom: 45%;
     margin-left: 5%;
     color: var(--off-white);
 }

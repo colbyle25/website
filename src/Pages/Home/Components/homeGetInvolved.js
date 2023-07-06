@@ -40,8 +40,8 @@ class HomeSocialMedia extends Component{
         return(
             <div className = 'row'>
                 <div className = 'col get_involved_border_div'>
-                    <h1 className = 'get_involved_h1 mark'>
-                        Come Visit our Socials!
+                    <h1 className = 'get_involved_h1 '>
+                        Visit our Socials
                     </h1>
                     <h3 className = 'get_involved_h3'>
                         See the latest announcements and events and relive Barrio on Youtube.
@@ -71,7 +71,7 @@ class HomeDonate extends Component{
                     className = 'get_involved_img'/>
                 </div>
                 <div className = 'col get_involved_div_no_border'>
-                    <h1 className = 'get_involved_h1 mark'>
+                    <h1 className = 'get_involved_h1 '>
                         Make a Donation
                     </h1>
                     <h3 className = 'get_involved_h3'>
@@ -92,7 +92,7 @@ class HomeEmail extends Component{
         return(
             <div className = 'row'>
                 <div className = 'col get_involved_border_div'>
-                    <h1 className = 'get_involved_h1 mark'>
+                    <h1 className = 'get_involved_h1'>
                         Subscribe to our Email List
                     </h1>
                     <h3 className = 'get_involved_h3'>

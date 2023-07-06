@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.gallery_background{
+    background-color: var(--off-white);
+}
+
+.gallery_heading{
+    font-family: 'Playfair Display';
+    padding-top: 3%;
+    margin-bottom: 4%;
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*=============Person Classes=================*/
+
+/* parent person container - force components to vertically stack*/
+.person_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* class for person div container */
+.person_img_container{
+    overflow: hidden;
+}
+
+/* class for person img. you will probably want to adjust the width depending on what pics historic provides that year */
+.person_img_container img{
+    width: 30vh;
+    transition: transform 0.5s;
+}
+
+/* zoom on hover animation for person img */
+.person_img_container img:hover {
+    transform: scale(1.5);
+}
+
+/* force text to wrap */
+/* you will probably want to adjust the width depending on what pics historic provides that year */
+.person_text_container{
+    width: 35vh;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+/* create buffer of space between person information */
+.person_info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.person_name{
+    font-family: 'Playfair Display';
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    margin-top: 3%;
+}
+
+.person_major{
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    color: black;
+    margin-top: 3%;
+}
+
+.person_email{
+    font-family: 'Open Sans';
+    font-size: 1.3em;
+    color: black;
+    margin-top: 3%;
+}
+
+.person_title{
+    font-family: 'Playfair Display';
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    margin-top: 3%;
+}

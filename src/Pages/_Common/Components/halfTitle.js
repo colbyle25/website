@@ -1,19 +1,20 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/halfTitle.css'
-import PropTypes from 'prop-types'
 
 /* This is a common title panel which occupies 50% screen height; appears on all pages except Home.
 **
 ** Usage Guide:
-** PROPS: 
-** header = header text
-** imgSrc = file path to your image or a web link
+**  PROPS: 
+**      header      = header text
+**      imgSrc      = file path to your image or a web link
 **
-** OPTIONAL PROPS:
-** para = small subheading/caption text 
-** brightness = % brightness of image (100 default) if your image is too bright/dim
-** pos = vertical position of the image (50 default) to focus on when cropping
+**  OPTIONAL PROPS:
+**      caption     = small subheading/caption text 
+**      captionLink = optional link you want your caption text to link to
+**      brightness  = % brightness of image (100 default) if your image is too bright/dim
+**      position    = vertical position of the image (50 default) to focus on when cropping
 */
 
 export default class HalfTitle extends Component{
@@ -36,7 +37,9 @@ export default class HalfTitle extends Component{
 
                 <img src = {this.props.imgSrc} className = 'half_title_img half_title_img_brightness half_title_img_position'/>
                 <h1 className ='half_title_heading'>{this.props.header}</h1>
-                <p className='half_title_paragraph'>{this.props.para}</p>
+                <Link to={this.props.captionLink} target='_blank'>
+                    <p className='half_title_caption'>{this.props.caption}</p>
+                </Link>
             </div>
         )
     }

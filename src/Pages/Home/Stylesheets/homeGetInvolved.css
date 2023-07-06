@@ -46,6 +46,7 @@
     transform: translate(10%, 0);
 }
 
+/* this is like a highlighter effect, apply it to the h1s. idk if i liked it or not so i left it off */
 .mark {
     background: transparent;
     background-image: linear-gradient(
