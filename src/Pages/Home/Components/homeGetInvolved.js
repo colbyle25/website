@@ -53,7 +53,7 @@ class HomeSocialMedia extends Component{
                 </div>
                 <div className = 'col get_involved_div_no_border'>
                     {/* if you change this youtube link, go to the Common/Components/youtubeEmbed.js file and change the size dimensions*/}
-                    <YoutubeEmbed embedId='2vajWORwINE' />
+                    <YoutubeEmbed embedId='2vajWORwINE' embedWidth='90%' embedHeight='400px' />
                 </div>
             </div>
         )

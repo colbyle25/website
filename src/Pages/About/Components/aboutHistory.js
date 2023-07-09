@@ -12,7 +12,7 @@ export default class History extends Component{
         return(
             // quote section
             <div className = 'history_background'>
-                <h1 className = 'history_heading'>1988</h1>
+                <h1 className = 'history_heading'>~1988~</h1>
                 <p className = 'history_text'>History text here</p>
 
                 <div className = 'history_quote_parent'>
@@ -30,7 +30,7 @@ export default class History extends Component{
             </div>
 
             {/* Today section*/}
-                <h1 className = 'history_heading'>{currYear}</h1>
+                <h1 className = 'history_heading'>~{currYear}~</h1>
                 <div className = 'history_quote_parent'>
                     <p className = 'history_quote'>{aboutText}</p>
                     <div className = 'row'>

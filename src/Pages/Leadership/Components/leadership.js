@@ -5,6 +5,7 @@ import HalfTitle from '../../_Common/Components/halfTitle';
 import Footer from '../../_Common/Components/footer';
 
 import LeadershipGallery from './leadershipGallery';
+import LeadershipIntro from './leadershipIntro';
 
 /* Main export file to index that combines all "home" components */
 
@@ -14,6 +15,7 @@ export default class Leadership extends Component{
             <div>
                 <Navbar />
                 <HalfTitle header = 'Leadership' imgSrc = './Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={55} caption='Read Bios' captionLink='https://google.com'/>
+                <LeadershipIntro />
                 <LeadershipGallery />
                 <Footer />
             </div>
