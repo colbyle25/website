@@ -33,8 +33,8 @@ export default class TitleScreen extends Component{
             {
                 imgSrc: imgDir + 'Title_Fourth_Year_Modern.jpeg',
                 captionHeader: '4th Year Modern, Barrio 2023',
-                captionPara: 'View more pictures'
-                //no link
+                captionPara: 'View more pictures',
+                link: 'https://uvaoyfa.myportfolio.com/oyfa-2022-2023'
             } 
         )        
         //continue as you see fit

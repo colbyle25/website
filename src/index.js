@@ -10,6 +10,7 @@ import Events from './Pages/Events/Components/events'
 import Links from './Pages/Links/Components/links'
 import Leadership from './Pages/Leadership/Components/leadership'
 import Archives from './Pages/Archives/Components/archives'
+import LeadershipBio from './Pages/Leadership/Components/leadershipBio'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,6 +30,7 @@ root.render(
         <Route path='/Links' element={<Links />} />
         <Route path='/Leadership' element={<Leadership />} />
         <Route path='/Archives' element={<Archives />} />
+        <Route path='/Bios' element={<LeadershipBio />} /> {/*Bios is not on the Navbar but is linked on Leadership page*/}
     </Routes>
   </BrowserRouter>
 )

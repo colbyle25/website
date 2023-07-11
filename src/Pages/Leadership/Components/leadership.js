@@ -14,7 +14,7 @@ export default class Leadership extends Component{
         return(
             <div>
                 <Navbar />
-                <HalfTitle header = 'Leadership' imgSrc = './Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={55} caption='Read Bios' captionLink='https://google.com'/>
+                <HalfTitle header = 'Leadership' imgSrc = './Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={55} caption='Read Bios' captionLink='/Bios'/>
                 <LeadershipIntro />
                 <LeadershipGallery />
                 <Footer />

@@ -1,4 +1,4 @@
-import React, {useState, Component} from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import jsonp from 'jsonp'
 import '../Stylesheets/emailsignup.css'

@@ -2,12 +2,6 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/leadershipGallery.css';
 import { BOARD, COUNCIL, oyfaAge } from '../../../Constants';
-import YoutubeEmbed from '../../_Common/Components/youtubeEmbed';
-
-/* idea: calculate row size and accordingly provision row size + 1 columns, also increase the width of the panel for larger row sizes 
-** will need another component for this which renders multiple Person components
-Big h1 at the top (B&C 35) with a youtube embed below
-*/
 
 /********************************************************************************************************************
 ** This is a comprehensive file which contains, from the highest level to the lowest level, LeadershipGallery,
@@ -175,12 +169,14 @@ class Person extends Component{
                     </div>
                 ))}
             </div>
-    
+
         return(
             <div className = 'col person_container'>
     
                 <div className = 'person_img_container'>
-                    <img src={imgSrc} />
+                    <a href = {'/Bios#'+info[0].name}> {/* For now, Link doesn't work but a does. This is because you need to set up a HashRouter to respect the hash sections, TODO */}
+                        <img src={imgSrc} />
+                    </a>
                 </div>
     
                 {titleComponent}

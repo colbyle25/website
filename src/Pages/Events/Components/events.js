@@ -11,7 +11,7 @@ export default class Events extends Component{
         return(
             <div>
                 <Navbar />
-                <HalfTitle header = 'Events' imgSrc = './Images/Events/Events_Title_Yogoyfa.jpeg' brightness = {80} caption='Check Instagram for latest updates' captionLink='https://www.instagram.com/oyfaatuva/'/>
+                <HalfTitle header = 'Events' imgSrc = './Images/Events/Events_Title_Yogoyfa.jpeg' brightness = {80} caption='Check Instagram for latest updates' captionLink='https://www.instagram.com/oyfaatuva/' newTab = 'true'/>
                 <Footer />
             </div>
         )
