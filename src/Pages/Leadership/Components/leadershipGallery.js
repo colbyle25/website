@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/leadershipGallery.css';
-import { BOARD, COUNCIL, oyfaAge } from '../../../Constants';
+import { BOARD, COUNCIL } from '../../../Constants';
 
 /********************************************************************************************************************
 ** This is a comprehensive file which contains, from the highest level to the lowest level, LeadershipGallery,

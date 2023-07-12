@@ -5,14 +5,22 @@ import Navbar from '../../_Common/Components/navbar'
 import Footer from '../../_Common/Components/footer'
 import {BOARD, COUNCIL} from '../../../Constants';
 
+/********************************************************************************************************************
+** This is a comprehensive file which contains, from the highest level to the lowest level, BioGrid, BioRow, and
+** BioText classes. This allows you to simply follow the highest level call and simply pass a single array to
+** automatically render the entire Bios page, or you can write custom code to render a row or just the textual
+** committee info if you wish to rearrange things your own way.
+********************************************************************************************************************/
+
 export default class LeadershipBio extends Component{
     render(){
         const test = {name: 'Colby Le', bioImgSrc: 'http://www.oyfaatuva.com/images/b&c%2035/chris.png', pronouns: 'he/him', year: '3rd year', major: 'Architecture', email: 'cgc4sbm@virginia.edu', city: 'Virginia Beach, VA', bio:"Hello. My name is Christopher Collins. When I am not making oyfa graphics, I like to have long walks on the beach at sunset. My friends say I am quirky, smart, shy, but also fearless. My family [Amihan] and friends are really important to me, especially my board and council bias, Jake Ryan Ochave. I can be silly at times, I love to laugh, I'm down to earth, and I love to travel. People tend to notice my eyes and my smile, and there’s no such thing as a typical Friday night for me. Favorite Quote: 'Live, Laugh, Love', Instagram: @crispy.lifts, Minecraft Username: americanramen"}
         
-        /*BOARD and COUNCIL arrays were originally modeled for just the LeadershipGallery calls. Recall that a 
-        **CommitteeGrid is RowsXColumns, but a BioGrid is just Rows of a single column. This means we have to
-        **remove an extraneous layer of the array structure (remove a set of brackets) with the flat method
-        **to be able to use the information in our BioGrid call. */
+        /* BOARD and COUNCIL arrays were originally modeled for just the LeadershipGallery calls. Recall that a 
+        ** CommitteeGrid is 2 dimensional (RowsXColumns, but you could say 3-D because each Committee has an
+        ** array of people/info), but a BioGrid is just 1 dimensional (Rows where each row is one person).
+        ** This means we have to remove an extraneous layer of the array structure (remove a set of brackets)
+        ** with the flat(1) method to be able to use the information in our BioGrid call */
         return(
             <div>
                 <Navbar />

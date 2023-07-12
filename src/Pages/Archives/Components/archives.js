@@ -4,6 +4,8 @@ import Navbar from '../../_Common/Components/navbar';
 import HalfTitle from '../../_Common/Components/halfTitle';
 import Footer from '../../_Common/Components/footer';
 
+import FileGallery from './archivesFileGallery';
+
 /* Main export file to index that combines all "home" components */
 
 export default class Archives extends Component{
@@ -11,7 +13,8 @@ export default class Archives extends Component{
         return(
             <div>
                 <Navbar />
-                <HalfTitle header='Archives' img=''/>
+                <HalfTitle header='Archives' imgSrc='./Images/Archives/Archives_Title_D7_JMU.jpeg' position={15} brightness={70}/>
+                <FileGallery />
                 <Footer />
             </div>
         )
