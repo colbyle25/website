@@ -5,10 +5,57 @@
 ==========================================================================================*/
 
 
-/* The following constants, BOARD, COUNCIL, and VENMO_LINK need to be updated every year */
+/* The following constants, LINKS, BOARD, COUNCIL, and VENMO_LINK need to be updated every year */
 /*=================UPDATE EVERY YEAR=================================================================================*/
 /*=================UPDATE EVERY YEAR=================================================================================*/
 /*=================UPDATE EVERY YEAR=================================================================================*/
+
+
+/* This is the sectioned links which will be displayed on the links page. Most time-sensitive links will probably be
+** under the Annoucements section, but make as many sections as you want. */
+export const LINKS =
+    [
+        { 
+            sectionTitle: 'OYFA Links',
+            links: 
+                [
+                    {header: 'OYFA Historic Photos', para: 'View our official archive of memories', link: 'https://uvaoyfa.myportfolio.com/'},
+                    {header: 'OYFA 2023-2024 Events Google Calendar', para: 'Clear your calendar for our amazing events!', link: 'https://calendar.google.com/calendar/u/0?cid=Y19uMzRsOThkbGE2cW5vYWJkbG9ibmQzYXY3c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t'},
+                    {header: 'Week in OYFA (WIO) Sign-Up', para: 'Get our weekly newletter featuring announcements, news, puzzles, and fun tidbits!', link: 'http://eepurl.com/gBOWJv'},
+                    {header: 'OYFA Discord', para: 'Play games with Oyfans', link: 'https://discord.gg/3EZgad'},
+                ]
+        },
+
+        { 
+            sectionTitle: 'Announcements',
+            links: 
+                [
+                    {header: 'OYFA Excellence Scholarship', para: 'The 2023 Scholarship is closed but stay tuned for 2024', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfk7EZutPVbnjQcCzlXYK9H2rdDpbjVfWcS6TuAqvZs-b6NFQ/viewform'},
+                ]
+        },
+
+        { 
+            sectionTitle: 'Facebook Groups',
+            links: 
+                [
+                    {header: 'Official Facebook Group', para: 'Official channels for news and info. Find our other socials at the bottom of the page!', link: 'https://www.facebook.com/groups/oyfaatuva/'},
+                    {header: 'Chilling Out With OYFA', para: 'Our silly casual Facebook group', link: 'https://www.facebook.com/groups/596905140414588/'},
+                    {header: 'D7 Facebook Group', link: 'https://www.facebook.com/groups/2204736918'},
+                    {header: 'OYFA Kickboxing Messenger Chat', para: 'Learn kickboxing, exercise, and de-stress', link:'https://m.me/j/AbaysYg9tnmQnxTJ/'}
+                ]
+        },
+
+        { 
+            sectionTitle: 'External',
+            links: 
+                [
+                    {header: 'External Org WIO Announcement Requests', link:'https://docs.google.com/forms/d/e/1FAIpQLScyJWjb7ewew4lsxuoGLVaQJyWHYATVHPBtJKpKJJxksDjN0g/viewform?usp=sf_link'},
+                    {header: 'About Lokal Lab Siargao', para: 'Non-profit assisting Typhoon Rai relief efforts', link: 'https://linktr.ee/oyfa?fbclid=PAAaaTXP_9liDXPvtaYlV2UNUidQou8ZnStjYLCk8BvLiseZcYhpgiKLVhAYw_aem_AfMPJJHIHpI6sGK4ebnnCdlsd4_okhs8MI9qzI17PEd4dk55Rx-VAxPnKVeK0rn2__M#:~:text=About%20Lokal%20Lab%20Siargao'},
+                    {header: 'Phillipines Typhoon Relief Fund', para: 'No longer accepting donations, but read about the effects of Typhoon Rai', link: 'https://gofund.me/60f4ee36'},
+                ]
+        },
+    ]
+
 
 /* This is the information for all Board members, which will be rendered on the Leadership page. To understand the
 ** the brackets, read the documentation in leadershipGallery.js. You may change this bracket layout depending on 
@@ -231,6 +278,13 @@ export const VENMO_LINK = 'https://account.venmo.com/u/Kyla-Quimson'
 /*=================LESS LIKELY TO CHANGE YEAR-TO-YEAR=====================================================================*/
 /*=================LESS LIKELY TO CHANGE YEAR-TO-YEAR=====================================================================*/
 
+/* File info which will be rendered on the Archives page */
+export const FILES = 
+[
+    {name: 'OYFA Constitution', imgSrc: './Images/Archives/Archives_Preview_Constitution.png', link: 'https://docs.google.com/document/d/1haR6qSnU0WI45C-wj2Ez2XEHqMeekQ3Sk_eB_Vyu74M/edit?usp=sharing'},
+    {name: 'B&C Archive', imgSrc: './Images/Archives/Archives_Preview_B&C_Archive.png', link: './Files/Archives_B&C_Archive.pdf'},
+    {name: 'Solidarity Statement', imgSrc: './Images/Archives/Archives_Preview_Solidarity_Statement.png', link: './Files/Archives_Solidarity_Statement.pdf'}
+]
 
 /* Mailchimp WIO Root Form Posting Link, used in EmailSignup */
 export const MAILCHIMP_BASE_URL = 'https://oyfaatuva.us4.list-manage.com/subscribe/post-json?u=06c31be345165e241d2affc73&amp;id=11be915f14&amp;f_id=00ad07e9f0'

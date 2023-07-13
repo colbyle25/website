@@ -13,9 +13,7 @@ import {BOARD, COUNCIL} from '../../../Constants';
 ********************************************************************************************************************/
 
 export default class LeadershipBio extends Component{
-    render(){
-        const test = {name: 'Colby Le', bioImgSrc: 'http://www.oyfaatuva.com/images/b&c%2035/chris.png', pronouns: 'he/him', year: '3rd year', major: 'Architecture', email: 'cgc4sbm@virginia.edu', city: 'Virginia Beach, VA', bio:"Hello. My name is Christopher Collins. When I am not making oyfa graphics, I like to have long walks on the beach at sunset. My friends say I am quirky, smart, shy, but also fearless. My family [Amihan] and friends are really important to me, especially my board and council bias, Jake Ryan Ochave. I can be silly at times, I love to laugh, I'm down to earth, and I love to travel. People tend to notice my eyes and my smile, and there’s no such thing as a typical Friday night for me. Favorite Quote: 'Live, Laugh, Love', Instagram: @crispy.lifts, Minecraft Username: americanramen"}
-        
+    render(){        
         /* BOARD and COUNCIL arrays were originally modeled for just the LeadershipGallery calls. Recall that a 
         ** CommitteeGrid is 2 dimensional (RowsXColumns, but you could say 3-D because each Committee has an
         ** array of people/info), but a BioGrid is just 1 dimensional (Rows where each row is one person).
@@ -31,10 +29,6 @@ export default class LeadershipBio extends Component{
 
                     <h1 className = 'bio_heading'>Council</h1>
                     <BioGrid bioRows = {COUNCIL.flat(1)} />
-
-                    <section id = 'colby'>
-                    <BioRow imgSrc = 'http://www.oyfaatuva.com/images/officers%2022-23/community.png' info={test} id = 'colby'/>
-                    </section >
                 </div>
 
                 <Footer />
