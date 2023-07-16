@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+}
+
+.events_background{
+    background-color: var(--off-white);
+    padding-bottom: 5%;
+}
+
+.events_heading{
+    font-family: 'Playfair Display';
+    padding-top: 3%;
+    font-size: 15vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.events_calendar_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events_calendar_iframe{
+    padding-top: 3%;
+    font-family: 'Playfair Display';
+    width: 80%;
+    height: 60vh;
+}

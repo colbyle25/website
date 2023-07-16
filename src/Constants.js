@@ -21,6 +21,14 @@
 /* Current year's treasurer link, used in HomeGetInvolved */
 export const VENMO_LINK = 'https://account.venmo.com/u/Kyla-Quimson'
 
+/*=================EVENTS=====================================================================*/
+
+/* Find the current google calendar embed link for this year's events. Log into the Google account,
+** go to settings for the current calendar -> embed code -> customize, choose agenda, turn off title,
+** print icon, calendar list, time zone. Then take only the src url rather than all the embed code and change this,
+** the Calendar component in eventsCalendar.js auto applies custom sizing rules. */
+export const EVENTS_CALENDAR_SOURCE = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237986CB&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=0&src=Y19uMzRsOThkbGE2cW5vYWJkbG9ibmQzYXY3c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441'
+
 /*=================LINKS=====================================================================*/
 
 /* sectioned link information to render the Links page */
