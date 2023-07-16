@@ -3,7 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import SocialMedia from './socialmedia';
 import EmailSignup from './emailsignup';
 import '../Stylesheets/footer.css'
-import { SOCIAL_MEDIA_HANDLES_NO_TEXT } from '../../../Constants';
+import { SOCIAL_MEDIA_HANDLES_NO_TEXT, GITHUB_LINK } from '../../../Constants';
+
+/********************************************************************************************************************
+** This file renders the Footer component, which is a common component that appears on all pages. It contains two
+** sections, one with some social media buttons and a WIO signup form, the other with some fine print text and links.
+********************************************************************************************************************/
 
 export default class Footer extends Component{
 
@@ -14,10 +19,12 @@ export default class Footer extends Component{
 
         return(
             <footer className='text-muted footer'>
+
+                {/* Social media and email section */}
                 <section className="footer_section">
                     <div>
                         <div className='row'>
-                            <div className='col-md-4'>
+                            <div className='col-4'>
                                 <SocialMedia handles = {SOCIAL_MEDIA_HANDLES_NO_TEXT} numColumns = {numOfSocialMediaColumns}/>
                             </div>
                             <div className='col'>
@@ -26,6 +33,8 @@ export default class Footer extends Component{
                         </div>
                     </div>
                 </section>
+
+                {/* Social media and email section */}
                 <section>
                     <div>
                         <div className="row mt-3">
@@ -40,9 +49,12 @@ export default class Footer extends Component{
                                     acts or omissions.
                                 </p>
 
-                                <p className = 'footer_paragraph'>
-                                    Website created and maintained by OYFA Webmasters. Access code here.
-                                </p>
+                                    <p className = 'footer_paragraph'> {/* have to manually add in the white space */}
+                                        Website created and maintained by OYFA Webmasters.&nbsp;
+                                            <a href = {GITHUB_LINK} target = '_blank' className = 'footer_anchor'> 
+                                        Access code here.
+                                            </a>
+                                    </p>
 
                                 <p className = 'footer_paragraph'>
                                     Visit the previous website

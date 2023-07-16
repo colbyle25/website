@@ -1,62 +1,79 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/aboutHistory.css'
-import { quoteText, aboutText } from '../../../Constants'
+import { ABOUT_QUOTE_TEXT, ABOUT_PRESENT_TEXT } from '../../../Constants'
 
-/* Main export component to index that combines all "About" components */
+/* This file renders the first section, titled 1988 and {currYear}, of the About page. No fancy classes or usages here */
 
 export default class History extends Component{
     render(){
         const currYear = new Date().getFullYear();
 
         return(
-            // quote section
+            /* quote section
+            ** will render the quote and some decorative quotation marks on the left and right. There is some trouble in
+            ** aesthetically aligning these quotation marks so keep playing with it. */
             <div className = 'history_background'>
-                <h1 className = 'history_heading'>~1988~</h1>
-                <p className = 'history_text'>History text here</p>
+                <h1 className = 'history_heading'>1988</h1>
+                <p className = 'history_text'>NOTE: this text here and the row of dogs below are placeholders and will be rewritten with a brief history of OYFA :)</p>
 
                 <div className = 'history_quote_parent'>
-                    <h1 className = 'history_quotation1'>"</h1>
-                    <p className = 'history_quote'>{quoteText}</p>
-                    <h1 className = 'history_quotation2'>"</h1>
+                    {/*alternative quotation mark outside of the <p> - <h1 className = 'history_quotation1'>"</h1>*/}
+                    <p>
+                        <span className = 'quotation1_bold'>
+                            "
+                        </span>
+
+                        <span className = 'history_quote'>
+                            {ABOUT_QUOTE_TEXT}
+                        </span>
+
+                        <span className = 'quotation2_bold'>
+                            "
+                        </span>
+                    </p>
+                    {/*alternative quotation mark outside of the <p> - <h1 className = 'history_quotation2'>"</h1>*/}
                     <p className = 'history_quote_author'> - Dr. Ron Labuguen</p>
                 </div>
 
             {/* Image section */}
             <div className = 'row history_img_parent'>
-                <HistoryRowImg imgSrc = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/5913f134-5015-4e10-8c1f-bf7c14469f5b_rw_1920.jpg?h=196c3a1737e8f0276875b34a2d3fc2e8'/>
+                <HistoryRowImg imgSrc = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490'/>
                 <HistoryRowImg imgSrc = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490' />
-                <HistoryRowImg imgSrc = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/72b49e4b-8b59-48c9-9704-79b77a982160_rw_600.jpg?h=74fb44f181e121fc6e146db2db540ef7' />
+                <HistoryRowImg imgSrc = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490' />
             </div>
 
             {/* Today section*/}
-                <h1 className = 'history_heading'>~{currYear}~</h1>
+                <h1 className = 'history_heading'>{currYear}</h1>
                 <div className = 'history_quote_parent'>
-                    <p className = 'history_quote'>{aboutText}</p>
-                    <div className = 'row'>
-                        <div className = 'col-4'>
-                            <img src = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/072e2b93-c21f-438b-8b51-fa9694c867aa_rw_1920.jpg?h=3153c5e061f64524affff500bde0c298' className = 'award_img'/>
-                        </div>
-                        <div className='col-4'>
-                            <img src = './Images/About/About_CIO_Award.jpg' className = 'award_img'/>
-                        </div>
+                    <p className = 'history_quote'>{ABOUT_PRESENT_TEXT}</p>
 
-                        <div className = 'col-4'>
-                            <img src = 'https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/75a2967a-0a10-40bd-93b9-c8a560bb4254_rw_1920.jpg?h=4ae1058222cb65bafb8388177a22bcd1' className = 'award_img' />
-                        </div>
-                    </div>
+                <div className = 'row award_img_container'>
+                    <HistoryRowImg imgSrc = './Images/About/About_Successful_People.jpeg'/>
+                    <HistoryRowImg imgSrc = './Images/About/About_CIO_Award.jpg' />
+                    <HistoryRowImg imgSrc = './Images/About/About_Trophy.jpeg' />    
+                </div>
+
                 </div>
             </div>
         )
     }
 }
 
+/*==USAGE GUIDE===================================================================================================
+**  DESCRIPTION:
+**      Renders a single image for the row of images below the quote. Just a img inside a div for conciseness.
+**  PROPS:
+**      imgSrc: string, link to the image
+**  RETURNS:
+**      Just a image inside a col-4. You can make a seperate prop for custom column size later.
+**==============================================================================================================*/
 class HistoryRowImg extends Component{
     render(){
         const imgSrc = this.props.imgSrc
 
         return(
-            <div className = 'col-md-4'>
+            <div className = 'col-4'>
                 <img className = 'history_img' src = {imgSrc}></img>
             </div>
         )

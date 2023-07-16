@@ -35,3 +35,8 @@
     font-family: 'Open Sans';
     font-size: 1em;
 }
+
+.footer_anchor{
+    text-decoration: none;
+    color: inherit;
+}

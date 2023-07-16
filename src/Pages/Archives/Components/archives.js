@@ -6,7 +6,7 @@ import Footer from '../../_Common/Components/footer';
 
 import FileGallery from './archivesFileGallery';
 
-/* Main export file to index that combines all "home" components */
+/* Main export file to index that combines all "archives" components */
 
 export default class Archives extends Component{
     render(){

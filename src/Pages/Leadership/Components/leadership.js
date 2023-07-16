@@ -7,7 +7,7 @@ import Footer from '../../_Common/Components/footer';
 import LeadershipGallery from './leadershipGallery';
 import LeadershipIntro from './leadershipIntro';
 
-/* Main export file to index that combines all "home" components */
+/* Main export file to index that combines all "leadership" components */
 
 export default class Leadership extends Component{
     render(){

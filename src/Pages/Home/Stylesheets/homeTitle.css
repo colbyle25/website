@@ -6,7 +6,7 @@
 
 /* dimming the carousel images to make the title pop, depending on the pictures you choose you may want to change this*/
 .title_img{
-    filter: brightness(75%);
+    filter: brightness(70%);
 }
 
 .title_img_container{
@@ -27,7 +27,7 @@
     font-family: 'Playfair Display';
     font-weight: bold;
     /*font-size: 8em;*/
-    font-size:12vh;
+    font-size:13vh;
     text-align: left;
     color: var(--off-white);
 }
@@ -42,7 +42,6 @@
 .title_caption_header{
     font-family: 'Playfair Display';
     font-weight: bold;
-    /*font-size: 1.5em;*/
     font-size: 1.5em;
     color: var(--off-white);
 }
@@ -51,7 +50,7 @@
 .title_caption_paragraph{
     font-family: 'Open Sans';
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.2em; 
     color: var(--off-white);
 }
 

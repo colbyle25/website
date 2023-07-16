@@ -8,6 +8,11 @@ import { MAILCHIMP_BASE_URL } from '../../../Constants'
 ** https://blog.afrieirham.com/how-to-integrate-mailchimp-with-react
 ** and the github repo attatched in that article */
 
+/* No special usage convention with these. These forms use state and JSX form to collect user info,
+** validates a correctly formatted email, and then uses a POST URL request to add the user to the Mailchimp
+** WIO list. <Email /> produces a form that only collects email, used in Footer. <EmailSignupWithName /> 
+** produces a full form that asks for first name and last name, seen on the HomeGetInvolved component. */
+
 function EmailSignup(){
     const [email, setEmail] = useState('')
 
@@ -77,6 +82,7 @@ function EmailSignupWithName(){
             <section>
             <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
             name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
+
                 {/* Start grid row */}
                 <div className="row email_center">
 

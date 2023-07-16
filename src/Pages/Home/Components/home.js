@@ -12,6 +12,7 @@ export default class Home extends Component{
     render(){
         return(
             <div>
+                <title>Home</title>
                 <Navbar />
                 <TitleScreen />
                 <Introduction />

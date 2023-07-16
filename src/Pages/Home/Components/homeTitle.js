@@ -54,10 +54,10 @@ class Title extends Component{
             <div className = 'title_parent'>
                 <h1 className = 'title_h1'>
                     Organization of Young
-                </h1>
-                <h1 className = 'title_h1'>
+                    <br></br>
                     Filipino Americans
                 </h1>
+
           </div>
         )
     }

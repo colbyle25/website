@@ -67,3 +67,7 @@
     color: black;
     margin-top: 1%;
 }
+
+.bio_anchor{
+    color: inherit;
+}

@@ -4,23 +4,31 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/halfTitle.css'
 
 /* This is a common title panel which occupies 50% screen height; appears on all pages except Home.
-**
-** Usage Guide:
+
+/*==USAGE GUIDE===================================================================================================
+**  DESCRIPTION:
+**      This is a common title panel which occupies 50% screen height; appears on all pages except Home.
 **  PROPS: 
-**      header      = header text
-**      imgSrc      = file path to your image or a web link
-**
+**      header      = string, title text
+**      imgSrc      = string, file path to your image or a web link
 **  OPTIONAL PROPS:
-**      caption     = small subheading/caption text 
-**      captionLink = optional link you want your caption text to link to
-**      newTab      = 'true' if the link should open in a new tab, else default to same tab
-**      brightness  = % brightness of image (100 default) if your image is too bright/dim
-**      position    = vertical position of the image (50 default) to focus on when cropping
-*/
+**      caption     = string, small subheading/caption text 
+**      captionLink = string, optional link you want your caption text to link to
+**      newTab      = string, 'true' if the link should open in a new tab, else default to same tab
+**      brightness  = int, % brightness of image (100 default) if your image is too bright/dim
+**      position    = int, vertical position of the image (50 default) to focus on when cropping. Basically if
+**                    the image isn't centered when you crop it you can use this to move the center of the img
+**                    up or down.
+**  RETURNS:
+**      HalfTitle component, which is an h1 title portion with an optional p caption, with optional React Link
+**      component.
+**==============================================================================================================*/
 
 export default class HalfTitle extends Component{
     render(){
         /* default prop values declared at bottom of file */
+
+        /* Because these CSS styles can change depending on the props, we have to use JS to dynamically set them */
         const brightnessStyle = `
             .half_title_img_brightness{
                 filter: brightness(${this.props.brightness}%);

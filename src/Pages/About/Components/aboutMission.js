@@ -6,10 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 
+/* This file renders the mission statements seen on the second section of the About page */
+
+/* simply declare/change an array of the text you want, and add
+** a new MissionRow according to the documentation in that class */
 export default class Mission extends Component{
-    /* USAGE
-    /* simply declare/change an array of the text you want, and add
-    ** a new MissionRow according to the documentation in that class */
 
     render(){
         const identityPoints = [
@@ -59,17 +60,22 @@ export default class Mission extends Component{
     }
 }
 
+/*==USAGE GUIDE===================================================================================================
+**  DESCRIPTION:
+**      This will create a single mission statement on the About page second section. Each row has a heading, some
+**      text, an image, and an optional caption text. For effect, you can specify an orientation and alternate
+**      between a left-hugging mission statement and a right-hugging mission statement.
+**  PROPS:
+**      header:       string, bolded playfair header text
+**      bulletpoints: array of strings, info paragraphs to render below header
+**      orientation:  text-left, text-right: which column to render text portion on
+**      imgSrc:       string, path to image on opposite column of text
+**  OPTIONAL PROPS:
+**      imgCaption    string, small img caption text with an arrow icon to point at the img
+**  RETURNS:
+**      MissionRow component: row div with top padding, containing header, paragraphs, img, and optional caption
+**==============================================================================================================*/
 class MissionRow extends Component{
-    /* USAGE
-    **  props: 
-    **      header: bolded playfair header text
-    **      bulletpoints: array of info points to render below header
-    **      orientation: text-left, text-right: which column to render text portion on
-    **      imgSrc: path to image on opposite column of text
-    **      imgCaption [optional]: small img caption text
-    **  returns:
-    **      row-class div with top padding
-    */
 
     render(){
         const orientation  = this.props.orientation
@@ -81,7 +87,7 @@ class MissionRow extends Component{
         let left_div_class = 'mission_left_container'
         let right_div_class = 'mission_right_container'
 
-        /* set div classes - text div should be bigger col-8 
+        /* set div classes - text div should be bigger than img so col-8 
         ** set class as "text-left" or "text-right" */
         if(orientation == 'text-left') {
             left_div_class = 'col-8 mission_left_container'

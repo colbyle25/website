@@ -6,7 +6,7 @@ import Footer from '../../_Common/Components/footer';
 
 import LinkGallery from './linksLinkGallery';
 
-/* Main export file to index that combines all "home" components */
+/* Main export file to index that combines all "links" components */
 
 export default class Links extends Component{
     render(){
