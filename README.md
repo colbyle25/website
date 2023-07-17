@@ -1,11 +1,12 @@
 <!-- PROJECT SHIELDS -->
 <!--
-*** I'm using markdown "reference style" links for readability.
+*** I'm using markdown "reference style" links for readability (but basic href links for the html).
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
 *** See the bottom of this document for the declaration of the reference variables
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
@@ -16,8 +17,8 @@
 
 <div align="center">
 
-  <a href="https://pbs.twimg.com/profile_images/1299847927809167361/8eTFikWf_400x400.jpg">
-    <img src="Public/Images/_Common/Navbar_OYFA_Logo.png" alt="Logo" width="100" height="100"></img>
+  <a href="http://www.oyfaatuva.com">
+    <img src="public/Images/_Common/Navbar_OYFA_Logo.png" alt="Logo" width="100" height="100"></img>
   </a>
 
   <h3 align="center">OYFA Website - React</h3>
@@ -33,12 +34,12 @@
     </a>
   </p>
 </div>
-
+<br />
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
+<details align="center">
+  <summary><strong>Table of Contents</strong></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -60,8 +61,7 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-
+<br />
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -86,16 +86,19 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The project uses Node.js as a development platform, GIT as version control, and github for file management. VSCode is recommended as the preferred text editor.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+1. Install VSCode: https://code.visualstudio.com/download
+    * Configure your preferred JS, React, and CSS settings
+    * Open up a terminal
+    * Set up integrated version control
+3. Download Node.js: https://nodejs.org/en/download
+4. Install the latest version of the npm package manager:
+    ```sh
+    npm install npm@latest -g
+    ```
 
 ### Installation
 
