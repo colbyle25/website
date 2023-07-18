@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/oyfaatuv/repositories/website_beta/
+    - /bin/cp -R * $DEPLOYPATH
