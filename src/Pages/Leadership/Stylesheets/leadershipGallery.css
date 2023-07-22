@@ -4,17 +4,26 @@
     --offer-white: #dad5cd
 }
 
-.gallery_background{
-    background-color: var(--offer-white);
-}
+/*=============Gallery-Wide Classes=================*/
 
 .gallery_heading{
     font-family: 'Playfair Display';
     padding-top: 3%;
     margin-bottom: 4%;
-    font-size: 8em;
+    font-size: 14vh;
     font-weight: bold;
     text-align: center;
+}
+
+@media screen and (max-width : 1300px) /* Phone Rules */
+{
+    .gallery_heading{
+        font-size: 10vh;
+    }
+}
+
+.gallery_background{
+    background-color: var(--offer-white);
 }
 
 

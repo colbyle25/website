@@ -1,11 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
 
+/*The Links needs to be a bit more packed than the other pages because it's more practical to see more links in one viewport*/
+
 :root{
     --off-white: #e8e5e0;
 }
 
+/*=============Link Classes=================*/
+
+.link_section_heading{
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    text-align: center;
+    font-size: 10vh;
+}
+
+.link_heading{
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    text-align: center;
+    font-size: 5vh;
+}
+
+@media screen and (max-width : 1300px) /* Phone rules */
+{
+    .link_section_heading{
+        font-size: 8vh;
+        word-break:break-all;
+    }
+
+    .link_heading{
+        font-size: 4vh;
+    }
+}
+
 .links_background{
     background-color: var(--off-white);
+}
+
+.links_spacing{
+    padding-top: 3%;
     padding-bottom: 5%;
 }
 
@@ -22,35 +56,20 @@
 }
 
 .link_section_container{
-    padding-top: 3%;
-}
-
-.link_section_heading{
-    font-family: 'Playfair Display';
-    font-size: 10em;
-    font-weight: bold;
-    text-align: center;
-}
-
-.link_heading{
-    text-decoration: underline;
-    color: black;
-    font-family: 'Playfair Display';
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
+    /*padding-top: 1%;*/
 }
 
 .link_paragraph{
     color: black;
     font-family: 'Open Sans';
-    margin-top: 3%;
-    font-size: 2em;
+    margin-top: 1%;
+    font-size: 1.5em;
     text-align: center;
 }
 
 .link_container{
     display: flex;
+    margin-top: -2%;
     flex-direction: column;
     align-items: center;
     justify-content: center;

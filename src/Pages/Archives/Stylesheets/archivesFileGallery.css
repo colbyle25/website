@@ -6,6 +6,24 @@
 
 }
 
+/*=============Archives Classes=================*/
+
+.file_heading{
+    font-family: 'Playfair Display';
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 5vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width : 1300px) /* Phone Rules */
+{
+    .file_heading{
+        font-size: 5vh;
+    }
+}
+
 .archives_background{
     background-color: var(--off-white);
 }
@@ -22,15 +40,6 @@
 .file_link{
     text-decoration: none;
     color: black;
-}
-
-.file_heading{
-    font-family: 'Playfair Display';
-    padding-top: 3%;
-    margin-top: 3%;
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
 }
 
 .file_img_container{

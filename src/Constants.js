@@ -348,9 +348,9 @@ export const SOCIAL_MEDIA_HANDLES_NO_TEXT = [
 /* Common Social Media Handles Array for passing as props to SocialMedia.js routine */
 export const SOCIAL_MEDIA_HANDLES = [
     {socialHandle: '@oyfaatuva', icon:'fa-facebook', link: FACEBOOK_LINK},
-    {socialHandle: '@oyfatuva', icon:'fa-instagram', link: INSTAGRAM_LINK},
+    {socialHandle: '@oyfaatuva', icon:'fa-instagram', link: INSTAGRAM_LINK},
     {socialHandle: '@uvaOYFA', icon:'fa-youtube', link: YOUTUBE_LINK},
-    {socialHandle: '@oyfatuva', icon:'fa-twitter', link: TWITTER_LINK}
+    {socialHandle: '@oyfaatuva', icon:'fa-twitter', link: TWITTER_LINK}
 ]
 
 /*=================ABOUT=====================================================================*/

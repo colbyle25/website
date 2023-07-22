@@ -2,20 +2,36 @@
     --off-white: #e8e5e0;
 }
 
+.leadership_heading{
+    font-family: 'Playfair Display';
+    padding-top: 3%;
+    font-size: 16vh;
+    font-weight: bold;
+    text-align: center;
+}
+
 .leadership_intro_background{
     background-color: var(--off-white);
+}
+
+@media screen and (max-width : 1300px) /* Phones */
+{
+    .leadership_heading{
+        font-family: 'Playfair Display';
+        padding-top: 3%;
+        font-size: 8vh;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Let's just hide the entirety of this intro component for mobile, the video doesn't render well at all */
+    .leadership_intro_background{
+        display: none;
+    }
 }
 
 .leadership_youtube_container{
     padding-top: 3%;
     padding-bottom: 5%;
     transform: translate(25%, 0);
-}
-
-.leadership_heading{
-    font-family: 'Playfair Display';
-    padding-top: 3%;
-    font-size: 15vh;
-    font-weight: bold;
-    text-align: center;
 }
