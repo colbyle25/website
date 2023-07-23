@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import '../Stylesheets/leadershipGallery.css';
-import { BOARD, COUNCIL } from '../../../Constants';
+import '../Stylesheets/leadershipGallery.css'
+import { BOARD, COUNCIL } from '../../../Constants'
+/* react-router does not natively support scrolling to specific page sections so we use this add-on package */
+import { HashLink } from 'react-router-hash-link'
 
 /********************************************************************************************************************
 ** This is a comprehensive file which contains, from the highest level to the lowest level, LeadershipGallery,
@@ -174,9 +176,11 @@ class Person extends Component{
             <div className = 'col person_container'>
     
                 <div className = 'person_img_container'>
-                    <a href = {'/Bios#'+info[0].name}> {/* For now, Link doesn't work but a does. This is because you need to set up a HashRouter to respect the hash sections, TODO */}
+                    <HashLink smooth to = {'/Bios#'+info[0].name} > {/* No idea why but when the page is first loaded the first link service will take you to the wrong section but going back a page and trying again it works perfectly...*/}
+                    {/* <a href = {'/Bios#'+info[0].name}> */}
                         <img src={imgSrc} />
-                    </a>
+                    {/* </a> */}
+                    </HashLink>
                 </div>
     
                 {titleComponent}

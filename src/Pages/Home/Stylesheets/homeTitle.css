@@ -11,7 +11,7 @@
 
 .title_img_container{
     width: 100vh;
-    max-height: 93vh;
+    height: 100vh;
   }
 
 /* force position of the div holding the title */

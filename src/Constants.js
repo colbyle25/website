@@ -24,10 +24,10 @@ export const VENMO_LINK = 'https://account.venmo.com/u/Kyla-Quimson'
 /*=================EVENTS=====================================================================*/
 
 /* Find the current google calendar embed link for this year's events. Log into the Google account,
-** go to settings for the current calendar -> embed code -> customize, choose agenda, turn off title,
-** print icon, calendar list, time zone. Then take only the src url rather than all the embed code and change this,
-** the Calendar component in eventsCalendar.js auto applies custom sizing rules. */
-export const EVENTS_CALENDAR_SOURCE = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237986CB&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=0&src=Y19uMzRsOThkbGE2cW5vYWJkbG9ibmQzYXY3c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441'
+** go to settings for the current calendar -> embed code -> customize, choose default view month/agenda, turn off title +
+** print icon + calendar list + time zone. Then take only the src url rather than all the embed code and change
+** this link, the Calendar component in eventsCalendar.js auto applies custom sizing rules. */
+export const EVENTS_CALENDAR_SOURCE = 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237986CB&ctz=America%2FNew_York&showNav=1&showTitle=0&showPrint=0&showCalendars=0&showTz=0&src=Y18zNjk4NGE5NjA3MDM2YTFlNDBkMDFjOWZjMzY3YWNiNzkyOGRjNTE2MWM5YmI1NzZjMDc4NzNmYzk3YTgwYjU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457'
 
 /*=================LINKS=====================================================================*/
 
@@ -41,7 +41,7 @@ export const LINKS =
                     {header: 'OYFA Historic Photos', para: 'View our official archive of memories', link: 'https://uvaoyfa.myportfolio.com/'},
                     {header: 'OYFA 2023-2024 Events Google Calendar', para: 'Clear your calendar for our amazing events!', link: 'https://calendar.google.com/calendar/u/0?cid=Y19uMzRsOThkbGE2cW5vYWJkbG9ibmQzYXY3c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t'},
                     {header: 'Week in OYFA (WIO) Sign-Up', para: 'Get our weekly newletter featuring announcements, news, puzzles, and fun tidbits!', link: 'http://eepurl.com/gBOWJv'},
-                    {header: 'OYFA Discord', para: 'Play games with Oyfans', link: 'https://discord.gg/3EZgad'},
+                    /* This link is currently broken...not sure if an oyfa discord is even still running but look out for a new link! */ //{header: 'OYFA Discord', para: 'Play games with Oyfans', link: 'https://discord.gg/3EZgad'},
                 ]
         },
 
@@ -61,7 +61,7 @@ export const LINKS =
                 [
                     {header: 'Official Facebook Group', para: 'Official channels for news and info. Find our other socials at the bottom of the page!', link: 'https://www.facebook.com/groups/oyfaatuva/'},
                     {header: 'Chilling Out With OYFA', para: 'Our silly casual Facebook group', link: 'https://www.facebook.com/groups/596905140414588/'},
-                    {header: 'D7 Facebook Group', link: 'https://www.facebook.com/groups/2204736918'},
+                    /* You may want this in the future but right now the D7 facebook is just full of advertisements...add it back when they get their act together! */    //{header: 'D7 Facebook Group', link: 'https://www.facebook.com/groups/2204736918'},
                     {header: 'OYFA Kickboxing Messenger Chat', para: 'Learn kickboxing, exercise, and de-stress', link:'https://m.me/j/AbaysYg9tnmQnxTJ/'}
                 ]
         },
@@ -71,8 +71,8 @@ export const LINKS =
             links: 
                 [
                     {header: 'External Org WIO Announcement Requests', link:'https://docs.google.com/forms/d/e/1FAIpQLScyJWjb7ewew4lsxuoGLVaQJyWHYATVHPBtJKpKJJxksDjN0g/viewform?usp=sf_link'},
-                    {header: 'About Lokal Lab Siargao', para: 'Non-profit assisting Typhoon Rai relief efforts', link: 'https://linktr.ee/oyfa?fbclid=PAAaaTXP_9liDXPvtaYlV2UNUidQou8ZnStjYLCk8BvLiseZcYhpgiKLVhAYw_aem_AfMPJJHIHpI6sGK4ebnnCdlsd4_okhs8MI9qzI17PEd4dk55Rx-VAxPnKVeK0rn2__M#:~:text=About%20Lokal%20Lab%20Siargao'},
-                    {header: 'Phillipines Typhoon Relief Fund', para: 'No longer accepting donations, but read about the effects of Typhoon Rai', link: 'https://gofund.me/60f4ee36'},
+                    {header: 'About Lokal Lab Siargao', para: 'Non-profit assisting Typhoon Rai relief efforts', link: 'https://www.lokalsiargao.com'},
+                    {header: 'Philippines Typhoon Relief Fund', para: 'No longer accepting donations, but read about the effects of Typhoon Rai', link: 'https://gofund.me/60f4ee36'},
                 ]
         },
 
@@ -172,7 +172,7 @@ export const COUNCIL =
                         info:   
                             [
                                 {name: 'Josh De Vera', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Josh.png', pronouns: 'he/him', year: '3rd year', major: 'BSCS with a minor in health and well-being', email: 'jvd7eqj@virginia.edu', city: 'Manassas, VA', bio:"Hello! It’s me, Josh, your 35th culture chair and I’m excited to bring the good vibes and energy to OYFA this year through Culturefest, Barrio, and all the events we have this year! I can’t wait to see everyone and get closer as an OYFamily hehe. Reach out if you wanna play sports or eat food (or both)!"},
-                                {name: 'Adrian Mamaril', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Adrian.png', pronouns: 'he/him', year: '4th year', major: 'Commerce (Finance and Accounting) and Foreign Affairs', email: 'scm5ht@virginia.edu', city: 'Manila, Phillipines', bio:"ask me anything!! I want to help you get through all the confusion, academics, resources, career, etc.! Instagram: adrian_mamaril_"}
+                                {name: 'Adrian Mamaril', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Adrian.png', pronouns: 'he/him', year: '4th year', major: 'Commerce (Finance and Accounting) and Foreign Affairs', email: 'scm5ht@virginia.edu', city: 'Manila, Philippines', bio:"ask me anything!! I want to help you get through all the confusion, academics, resources, career, etc.! Instagram: adrian_mamaril_"}
                             ]
                     },
 
@@ -457,7 +457,7 @@ export const COUNCIL_35 =
                         info:   
                             [
                                 {name: 'Josh De Vera', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Josh.png', pronouns: 'he/him', year: '3rd year', major: 'BSCS with a minor in health and well-being', email: 'jvd7eqj@virginia.edu', city: 'Manassas, VA', bio:"Hello! It’s me, Josh, your 35th culture chair and I’m excited to bring the good vibes and energy to OYFA this year through Culturefest, Barrio, and all the events we have this year! I can’t wait to see everyone and get closer as an OYFamily hehe. Reach out if you wanna play sports or eat food (or both)!"},
-                                {name: 'Adrian Mamaril', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Adrian.png', pronouns: 'he/him', year: '4th year', major: 'Commerce (Finance and Accounting) and Foreign Affairs', email: 'scm5ht@virginia.edu', city: 'Manila, Phillipines', bio:"ask me anything!! I want to help you get through all the confusion, academics, resources, career, etc.! Instagram: adrian_mamaril_"}
+                                {name: 'Adrian Mamaril', bioImgSrc: './Images/Leadership/35th B&C/Leadership_Adrian.png', pronouns: 'he/him', year: '4th year', major: 'Commerce (Finance and Accounting) and Foreign Affairs', email: 'scm5ht@virginia.edu', city: 'Manila, Philippines', bio:"ask me anything!! I want to help you get through all the confusion, academics, resources, career, etc.! Instagram: adrian_mamaril_"}
                             ]
                     },
 

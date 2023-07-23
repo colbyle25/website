@@ -5,10 +5,10 @@
 }
 
 .testimonies_parent{
-    background-color: #ecb534;
+    background-color: #ffb300;
     display: flex;
     justify-content: center;
-    height: 92vh;
+    height: 100vh;
 }
 
 .testimonies_margins{

@@ -14,9 +14,10 @@
     /*border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #051941 66%, #FFFF00 100%) 1;*/
     /*(alternate) border-image: linear-gradient(to right, #CE1126 0%, #0038A8 33%, #FFFF00 67%, #FFFFFF 100%) 1;*/
 
-    border-image: linear-gradient(to right, #841F27 0%, #336699 33%, #0c2e73 66%, #ecb534 100%) 1;
-    border-width: .8em;
+    border-image: linear-gradient(to right, #841F27 0%, #336699 33%, #0c2e73 66%, #ffb300 100%) 1;
+    border-width: 1.5vh;
     border-style: solid;
+    
     
     padding-bottom: 5%;
 }

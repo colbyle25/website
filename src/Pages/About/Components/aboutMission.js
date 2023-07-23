@@ -54,7 +54,7 @@ export default class Mission extends Component{
                     header = 'Dialogue'
                     bulletpoints = {dialoguePoints}
                     imgSrc = './Images/About/About_Ylona.png'
-                    imgCaption = "Spring 2023's symosium welcomed 88Rising's Ylona Garcia for live performances and a communal Kamayan dinner." />
+                    imgCaption = "Spring 2023's symposium welcomed 88Rising's Ylona Garcia for live performances and a communal Kamayan dinner." />
             </div>
         )
     }
