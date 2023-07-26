@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans|Noto+Serif');
 
 :root{
     --off-white: #e8e5e0;
@@ -12,7 +12,7 @@
 .title_img_container{
     width: 100vh;
     height: 100vh;
-  }
+}
 
 /* force position of the div holding the title */
 .title_parent{
@@ -57,4 +57,39 @@
 /* remove link underlining for the link */
 .title_link{
     text-decoration: none;
+}
+
+@media screen and (max-width : 1300px) /* Phone Rules */
+{
+    /* title carousel is now only 50% height so we get a wider landscape picture
+    *  center the title text and make things smaller */
+    .title_img{
+        width: 100vh;
+        height: 50vh;
+        object-fit: cover;
+    }
+    .title_img_container{
+        width: 100vh;
+        height: 50vh;
+    }
+    .title_h1{
+        font-family: "Playfair Display";
+        font-weight: bold;
+        font-size:7vh;
+        text-align: center;
+        color: var(--off-white);
+    }
+    .title_parent{
+        left: 0vh;
+        top: 5vh;
+    }
+    .title_caption{
+        top: 75%;
+    }
+    .title_caption_header{
+        font-size: 2vh;
+    }
+    .title_caption_paragraph{
+        font-size: 2vh; 
+    }
 }

@@ -91,12 +91,10 @@ class BioRow extends Component{
         else{
             return(
                 //we add the person's name as a unique ID to the row so we can link to that specific div in the gallery
-                <section className = 'row bio_row_parent' id={info.name}>
-                    <div className = 'col bio_img_container'>
-                        <img src = {imgSrc} className = 'bio_img' />
-                    </div>
+                <section className = 'bio_row_parent' id={info.name}>
+                    <img src = {imgSrc} className = 'bio_img' />
 
-                    <div className = 'col'>
+                    <div>
                         <BioText name = {info.name} pronouns = {info.pronouns} year = {info.year} major = {info.major}
                         city = {info.city} bio = {info.bio} />
                     </div>

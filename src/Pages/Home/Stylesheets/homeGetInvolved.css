@@ -71,3 +71,9 @@
 .get_involved_email{
     align-items: center;
 }
+
+@media screen and (max-width : 1300px) /* Phone Rules */
+{
+    /* */
+    
+}

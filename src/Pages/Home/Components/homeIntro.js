@@ -54,7 +54,7 @@ export default class Introduction extends Component{
                 </div>
 
                 {/* rendering the links row */}
-                <div class = 'row intro_links_container'>
+                <div class = 'intro_links_container'>
                     {links.map((item, index) => (
                         <PageLink text={item.text} link={item.link} key={index}/>
                     ))}
@@ -86,7 +86,7 @@ class PageLink extends Component{
         const link = this.props.link
 
         return(
-            <div className='col-md-4 intro_links_container'>
+            <div>
                 <Link to={link} className = 'intro_react_link'>
                     <p className = 'intro_link'>
                         {text}

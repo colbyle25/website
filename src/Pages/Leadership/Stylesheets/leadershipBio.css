@@ -24,10 +24,8 @@
 
 .bio_row_parent{
     padding-top: 5%;
-}
-
-.bio_img_container{
-    align-items:flex-end;
+    display: flex;
+    flex-direction: row;
 }
 
 /* force text to wrap */
@@ -41,9 +39,10 @@
 
 .bio_img{
     overflow: hidden;
-    width: 100%;
-    padding-right: 20%;
-    object-fit:cover;
+    object-fit:scale-down;
+    min-width: 50vh;
+    max-width: 50vh;
+    padding-right: 5vh;
 }
 
 .bio_name{
@@ -70,4 +69,35 @@
 
 .bio_anchor{
     color: inherit;
+}
+
+@media screen and (max-width : 1300px) /* Phone Rules */
+{
+    /* for phone let's stack the text below the picture so you can actually see the picture*/
+    .bio_row_parent{
+        flex-direction: column;
+    }
+
+    /* "Board" and "Council" headings need to be a bit smaller */
+    .bio_heading{
+        font-size: 8vh;
+    }
+
+    /* give the text some room to breathe below the picture and center it */
+    .bio_name{
+        margin-top: 5%;
+        font-size: 4vh;
+        text-align: center;
+    }
+    
+    .bio_h2{
+        font-size: 3vh;
+        margin-top: 1%;
+        text-align: center;
+    }
+    
+    .bio_text{
+        font-size: 2vh;
+        text-align: center;
+    }
 }
