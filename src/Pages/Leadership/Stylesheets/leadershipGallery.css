@@ -15,13 +15,6 @@
     text-align: center;
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
-{
-    .gallery_heading{
-        font-size: 10vh;
-    }
-}
-
 .gallery_background{
     background-color: var(--offer-white);
 }
@@ -38,12 +31,14 @@
 
 /* class for person div container */
 .person_img_container{
+    display: flex;
+    margin: 0 auto;
     overflow: hidden;
 }
 
 /* class for person img. you will probably want to adjust the width depending on what pics historic provides that year */
 .person_img_container img{
-    width: 45vh;
+    max-width: 50vh;
     transition: transform 0.5s;
 }
 
@@ -55,7 +50,7 @@
 /* force text to wrap */
 /* you will probably want to adjust the width depending on what pics historic provides that year */
 .person_text_container{
-    width: 45vh;
+    max-width: 55vh;
     word-wrap: break-word;
     text-align: center;
 }
@@ -103,12 +98,28 @@
 
 .committee_grid_container{
     padding-bottom: 5%;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
 }
 
 .person_row{
     display: flex;
     align-items: flex-start;
+}
+
+@media screen and (max-width : 1000px) /* Phone Rules */
+{
+    .gallery_heading{
+        font-size: 8vh;
+    }
+    .person_img_container img{
+        max-width: 40vh;
+        transition: transform 0.5s;
+    }
+    .person_text_container{
+        width: 40vh;
+        word-wrap: break-word;
+        text-align: center;
+    }
 }

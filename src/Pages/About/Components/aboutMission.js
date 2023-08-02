@@ -87,15 +87,16 @@ class MissionRow extends Component{
         let left_div_class = 'mission_left_container'
         let right_div_class = 'mission_right_container'
 
-        /* set div classes - text div should be bigger than img so col-8 
-        ** set class as "text-left" or "text-right" */
+        /* set div classes - text div should be bigger than img so we use flexbox to force vertical row orientation for
+        ** desktop, horizontal column orientation for mobile. Flexbox also allows us to let the text div be larger
+        ** than the image div, while still keeping both divs in line with the parent div. */
         if(orientation == 'text-left') {
-            left_div_class = 'col-8 mission_left_container'
-            right_div_class = 'col mission_right_container'
+            left_div_class = 'mission_left_container'
+            right_div_class = 'mission_right_container'
         }
         else{
-            left_div_class = 'col mission_left_container'
-            right_div_class = 'col-8 mission_right_container'
+            left_div_class = 'mission_left_container'
+            right_div_class = 'mission_right_container'
         }
 
         /* actual list element rendered */
@@ -135,32 +136,57 @@ class MissionRow extends Component{
         let leftContent = <></>
         let rightContent = <></>
 
-        if(orientation == 'text-left'){
+        /* if on mobile, always render the image as the "left" with the caption, because the horizontal row orientation
+        ** that works for desktop will then turn into a more scrollable vertical column orientation for mobile,
+        ** and the left will become the "top." Instead of alternating the left and right we will want the image 
+        ** to always be on top for mobile */
+        if(window.screen.width < 1000){
+
             leftContent = (
                 <div>
                     {headerH2}
                     {bulletpointList}
+                </div>
+            )
+            rightContent = (
+                <div>
+                    {missionImg}
                     {missionImgCaption}
                 </div>
             )
 
-            rightContent = missionImg
         }
-        else{
-            leftContent = missionImg
+        else{ //desktop
+            if(orientation == 'text-left'){
 
-            rightContent = (
-                <div>
-                    {headerH2}
-                    {bulletpointList}
-                    {missionImgCaption}
-                </div>  
-            )          
+                leftContent = (
+                    <div>
+                        {headerH2}
+                        {bulletpointList}
+                        {missionImgCaption}
+                    </div>
+                )
+                rightContent = missionImg
+
+            }
+            else{
+
+                leftContent = missionImg
+
+                rightContent = (
+                    <div>
+                        {headerH2}
+                        {bulletpointList}
+                        {missionImgCaption}
+                    </div>  
+                )        
+
+            }
         }
 
         /* return final row oriented content based on props */
         return(
-            <div className = 'row'>
+            <div className = 'mission_row_parent'>
                 <div className = {left_div_class}>
                     {leftContent}
                 </div>

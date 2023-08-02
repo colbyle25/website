@@ -29,17 +29,17 @@ function EmailSignup(){
             <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
             name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
                 {/* Start grid row */}
-                <div className="row">
+                <div className="email_no_name_parent">
                     {/* start grid column */}
-                    <div className="col-3">
+                    <div className = 'email_label_parent'>
                         <label className='email_label'>
-                        Subscribe to This Week in OYFA (WIO)
+                        Subscribe to WIO newsletter
                         </label>
                     </div>
                     {/* end Grid column */}
 
                     {/* start grid column */}
-                    <div className="col-md-6">
+                    <div className = 'email_input_parent'>
                         {/* Email input */ }
                         <div className="form-outline form-white">
                         <input type='email' name="EMAIL" value={email} id='mce-EMAIL' onChange={e=> setEmail(e.target.value)}
@@ -49,10 +49,10 @@ function EmailSignup(){
                     {/* end grid column */}
 
                     {/* start grid column */}
-                    <div className="col-md-2">
+                    <div className="email_button_parent">
                         {/* Submit button */}
                         <button type="submit" className="btn btn-outline-dark">
-                        Subscribe
+                        Join
                         </button>
                     </div>
                     {/* end grid column */}

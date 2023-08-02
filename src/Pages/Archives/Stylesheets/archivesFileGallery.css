@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
+@media screen and (max-width : 1000px) /* Phone Rules */
 {
     .file_heading{
         font-size: 5vh;

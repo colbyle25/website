@@ -59,7 +59,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
+@media screen and (max-width : 1000px) /* Phone Rules */
 {
     /* title carousel is now only 50% height so we get a wider landscape picture
     *  center the title text and make things smaller */

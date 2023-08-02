@@ -32,7 +32,7 @@
     color: var(--off-white);
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
+@media screen and (max-width : 1000px) /* Phone Rules */
 {
     /* The half title looks better as a one-third title for mobile, smaller font */
     .half_title_heading{
@@ -48,8 +48,8 @@
     }
 
     .half_title_caption{
-        font-size: 5vh;
-        top: 25%;
+        font-size: 3.5vh;
+        top: 20%;
         margin-left: 5%;
     }
 }

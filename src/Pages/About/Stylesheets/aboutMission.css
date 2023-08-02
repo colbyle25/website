@@ -7,6 +7,7 @@
 
 .mission_background{
     background-color: var(--offer-white);
+    padding-bottom: 3vh;
 }
 
 .mission_subheading{
@@ -19,12 +20,14 @@
 .mission_text{
     font-family: 'Open Sans';
     margin-bottom: 1%;
-    font-size: 1.5em;
+    font-size: 2.5vh;
 }
 
 .mission_img{
-    width:90%;
-    height:100%;
+    /*width: 90%;*/
+    height: 55vh;
+    min-width: 35vh;
+    max-width: 40vh;
     object-fit: cover;
     box-shadow: 0.5vh 0.5vh 0.5vh rgb(141, 141, 141);
 }
@@ -37,9 +40,15 @@
     font-style: italic;
 }
 
+.mission_row_parent{
+    display: flex;
+    flex-direction: row;
+}
+
 .mission_left_container{
     padding-top: 3%;
     margin-left: 3%;
+    margin-right: 3%;
     margin-bottom: 3%;
     text-align: left;
 }
@@ -49,4 +58,46 @@
     margin-right: 3%;
     margin-bottom: 3%;
     text-align: /*right might look better but hard to read*/left;
+}
+
+/*=============About Mission Classes=================*/
+@media screen and (max-width : 1000px) /* Phone Rules */
+{
+    .mission_subheading{
+        font-size: 6vh;
+    }
+    .mission_text{
+        font-size: 2.5vh;
+    }
+    .mission_img_caption{ /* turn off captions. if you want captions, comemnt out first line */
+        font-size: 2vh;
+    }
+    .mission_img_caption span{ /* hide the little arrows/carets because they're pointing horizontally and not vertically */
+        display: none
+    }
+    .mission_img{
+        height: auto;
+        box-shadow: unset;
+        padding-top: 3vh;
+        padding-bottom: 1vh;
+    }
+    .mission_row_parent{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .mission_left_container{
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Uncommenting will turn off the left-container images so we don't render two images directly above/below each other
+    .mission_left_container img{
+        display: none;
+    }
+    */
+    .mission_right_container{
+        margin: 0 auto;
+        text-align: center;
+    }
 }

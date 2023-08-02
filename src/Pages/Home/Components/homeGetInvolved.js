@@ -18,10 +18,10 @@ export default class HomeGetInvolved extends Component{
     render(){
         return(
             <div>
-                <div className = 'get_involved_padding'>
+                <div>
                     <HomeSocialMedia />
                 </div>
-                <div className = 'get_involved_padding'>
+                <div>
                     <HomeDonate />
                 </div>
                 <div>
@@ -37,21 +37,25 @@ class HomeSocialMedia extends Component{
     render(){
         const numOfSocialMediaColumns = 3
 
+        //if mobile then no text, otherwise have text
+        var socialMediaHandles = Constants.SOCIAL_MEDIA_HANDLES
+        if(window.screen.width < 1000) socialMediaHandles = Constants.SOCIAL_MEDIA_HANDLES_NO_TEXT
+
         return(
-            <div className = 'row'>
-                <div className = 'col get_involved_border_div'>
+            <div className = 'get_involved_parent'>
+                <div className = 'get_involved_div'>
                     <h1 className = 'get_involved_h1 '>
                         Visit our Socials
                     </h1>
                     <h3 className = 'get_involved_h3'>
                         See the latest announcements and events and relive Barrio on Youtube.
                         <div className = 'get_involved_social_media_container'>
-                            <SocialMedia handles={Constants.SOCIAL_MEDIA_HANDLES} numColumns={numOfSocialMediaColumns} />
+                            <SocialMedia handles={socialMediaHandles} numColumns={numOfSocialMediaColumns} />
                         </div>
 
                     </h3>
                 </div>
-                <div className = 'col get_involved_div_no_border'>
+                <div className = 'get_involved_div'>
                     {/* if you change this youtube link, go to the Common/Components/youtubeEmbed.js file and change the size dimensions*/}
                     <YoutubeEmbed embedId='2vajWORwINE' embedWidth='90%' embedHeight='400px' />
                 </div>
@@ -63,14 +67,15 @@ class HomeSocialMedia extends Component{
 class HomeDonate extends Component{
 
     render(){
-
+        var get_involved_parent_class = 'get_involved_parent'
+        if(window.screen.width < 1000) get_involved_parent_class = 'get_involved_mobile_reverse'
         return(
-            <div className = 'row'>
-                <div className = 'col get_involved_border_div'>
+            <div className = {get_involved_parent_class}>
+                <div className = 'get_involved_div'>
                     <img src = './Images/Home/Get_Involved_Sports.jpeg'
                     className = 'get_involved_img'/>
                 </div>
-                <div className = 'col get_involved_div_no_border'>
+                <div className = 'get_involved_div'>
                     <h1 className = 'get_involved_h1 '>
                         Make a Donation
                     </h1>
@@ -90,8 +95,8 @@ class HomeDonate extends Component{
 class HomeEmail extends Component{
     render(){
         return(
-            <div className = 'row'>
-                <div className = 'col get_involved_border_div'>
+            <div className = 'get_involved_parent'>
+                <div className = 'get_involved_div'>
                     <h1 className = 'get_involved_h1'>
                         Subscribe to our Email List
                     </h1>
@@ -100,7 +105,7 @@ class HomeEmail extends Component{
                     </h3>
                     <EmailSignupWithName className = 'get_involved_email'/>
                 </div>
-                <div className = 'col get_involved_div_no_border'>
+                <div className = 'get_involved_div'>
                     <img src = './Images/Home/Get_Involved_35th_B&C.jpeg'
                     className = 'get_involved_img' />
                 </div>

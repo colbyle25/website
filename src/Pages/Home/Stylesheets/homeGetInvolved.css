@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
 
-.get_involved_border_div{
-    text-align: center;
-    align-items: center;
-    margin-top: 1%;
-    border-right: .1em;
-    border-left: 0em;
-    border-top: 0em;
-    border-bottom: 0em;
-    border-color: black;
-    border-style: solid;
+.get_involved_parent{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-bottom: 3vh;
 }
 
-.get_involved_div_no_border{
+/* for mobile, because the rows will render in a column, the images will end up on top of the text instead of the bottom, so flip it */
+.get_involved_parent_mobile_reverse{
+    width: 95%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+}
+
+.get_involved_div{
+    flex: 1;
     text-align: center;
     align-items: center;
-    margin-top: 1%;
-    border-right: .1em;
-    border-left: 0em;
-    border-top: 0em;
-    border-bottom: 0em;
+    margin-top: 1vh;
 }
 
 .get_involved_padding{
@@ -64,7 +65,7 @@
     height: 315px;*/
     box-shadow: 0.5vh 0.5vh 0.5vh rgb(141, 141, 141);
     width: 90%;
-    height: 400px;
+    height: 40vh;
     object-fit: cover;
 }
 
@@ -72,8 +73,20 @@
     align-items: center;
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
+/* Re-orie*/
+@media screen and (max-width : 1000px) /* Phone Rules */
 {
     /* */
-    
+    .get_involved_img{
+        box-shadow: unset;
+        width: unset;
+        max-width: 95%;
+        height: 40vh;
+        padding-top: 3vh;
+        object-fit: cover;
+    }
+    .get_involved_parent{
+        padding-bottom: unset;
+        flex-direction: column-reverse;
+    }
 }

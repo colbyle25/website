@@ -6,7 +6,19 @@
 
 .footer{
     background-color: var(--off-white);
+}
 
+.footer_section_one_parent{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_social_media_parent{
+    flex: 1;
+}
+
+.footer_email_parent{
+    flex: 2;
 }
 
 .footer_section{ 
@@ -39,4 +51,15 @@
 .footer_anchor{
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width : 1000px) /* Phone Rules */
+{
+    .footer_section_one_parent{
+        display: flex;
+        padding-top: 3%;
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
 }

@@ -94,7 +94,7 @@
     box-shadow: 0.5vh 0.5vh 0.5vh rgb(141, 141, 141);
 }
 
-@media screen and (max-width : 1300px) /* Phone Rules */
+@media screen and (max-width : 1000px) /* Phone Rules */
 {
     /* decrease the size of stuff, throw the links into a flexbox to limit width and auto-c */
     .intro_parent{

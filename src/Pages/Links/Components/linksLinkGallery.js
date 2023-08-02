@@ -39,7 +39,7 @@ class LinkSection extends Component{
         const imgSrc       = this.props.imgSrc
 
         return(
-            <div className = 'link_section_container'>
+            <div>
                 <h1 className = 'link_section_heading'>{sectionTitle}</h1>
                 <img className = 'link_img_container' src = {imgSrc}/>
                 <div className = 'links_container'>
@@ -74,7 +74,7 @@ class Link extends Component{
         const link   = this.props.link;
 
         return(
-            <div className='col link_container'>
+            <div className='link_container'>
 
                 <a href = {link} target='_blank' className = 'link_anchor'>
 

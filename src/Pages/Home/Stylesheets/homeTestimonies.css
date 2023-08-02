@@ -48,3 +48,25 @@
     text-align: left;
     color: var(--off-white);
 }
+
+@media screen and (max-width : 1000px) /* Phone Rules */
+{
+    /* decrease the size of stuff, throw the links into a flexbox to limit width and auto-c */
+    .testimonies_parent{
+        height: 110vh;
+    }
+    .testimonies_h1{
+        margin-bottom: 3vh;
+        font-size:6vh;
+    }
+    .testimonies_h2{
+        font-size:4vh;
+    }
+    .testimonies_year{
+        font-size:3vh;
+    }
+    .testimonies_p{
+        margin-bottom: 25%;
+        font-size:2vh;
+    }
+}

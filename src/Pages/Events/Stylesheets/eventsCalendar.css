@@ -19,6 +19,7 @@
 
 .events_calendar_container{
     display: flex;
+    margin: auto;
     align-items: center;
     justify-content: center;
 }
@@ -28,4 +29,16 @@
     font-family: 'Playfair Display';
     width: 80%;
     height: 60vh;
+}
+
+@media screen and (max-width : 1000px) /* Phone Rules */
+{
+    .events_heading{
+        font-size: 6vh;
+    }
+    .events_calendar_iframe{
+        padding-top: 3%;
+        width: 90%;
+        height: 50vh;
+    }
 }

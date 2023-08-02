@@ -18,3 +18,22 @@
     display: flex;
     justify-content: center;
 }
+
+.email_no_name_parent{
+    display: flex;
+    flex-direction: row;
+}
+
+.email_label_parent{
+    flex: 1;
+    margin-right: 1vh;
+}
+
+.email_input_parent{
+    flex: 2;
+    margin-right: 1vh;
+}
+
+.email_button_parent{
+    flex: 1;
+}

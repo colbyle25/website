@@ -11,9 +11,13 @@ export default class Navbar extends Component {
     
     render() {
         /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
+        var navbarCSSClasses = 'navbar sticky-top navbar-expand-lg navbar-dark navbar_background'
+        /*if(window.screen.width < 1500){
+            navbarCSSClasses = 'navbar sticky-top navbar-expand navbar-dark navbar-background'
+        }*/
 
         return (
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark navbar_background">
+            <nav className={navbarCSSClasses}>
                     {NAVBAR_TABS.map((item, index) => (
                         <Tab name={item} key={index}/>
                     ))}

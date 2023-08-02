@@ -23,11 +23,11 @@ export default class Footer extends Component{
                 {/* Social media and email section */}
                 <section className="footer_section">
                     <div>
-                        <div className='row'>
-                            <div className='col-4'>
+                        <div className='footer_section_one_parent'>
+                            <div className='footer_social_media_parent'>
                                 <SocialMedia handles = {SOCIAL_MEDIA_HANDLES_NO_TEXT} numColumns = {numOfSocialMediaColumns}/>
                             </div>
-                            <div className='col'>
+                            <div className='footer_email_parent'>
                                 <EmailSignup />
                             </div>
                         </div>
@@ -51,15 +51,18 @@ export default class Footer extends Component{
 
                                     <p className = 'footer_paragraph'> {/* have to manually add in the white space */}
                                         Website created and maintained by OYFA Webmasters.&nbsp;
+                                            <u>
                                             <a href = {GITHUB_LINK} target = '_blank' className = 'footer_anchor'> 
                                         Access code here.
                                             </a>
+                                            </u>
                                     </p>
 
+                                {/* someone figure out how to get the previous website as a php file and get a link to it}
                                 <p className = 'footer_paragraph'>
                                     Visit the previous website
                                 </p>
-                                
+                                {*/}
                                 <p className = 'footer_paragraph'>
                                     Copyright Organization of Young Filipino Americans ©{copyrightYear}. All Rights Reserved.
                                 </p>
