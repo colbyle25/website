@@ -4,6 +4,10 @@
     --off-white: #e8e5e0;
 }
 
+.half_title_container{
+    position: relative;
+}
+
 .half_title_heading{
     position: absolute;
     font-family: 'Playfair Display';
@@ -27,8 +31,8 @@
     font-family: 'Playfair Display';
     /*  font-size: 3em;  */
     font-size: 7vh;
-    bottom: 45%;
-    margin-left: 6%;
+    top: 70%;
+    margin-left: 5%;
     color: var(--off-white);
 }
 
@@ -49,7 +53,7 @@
 
     .half_title_caption{
         font-size: 3.5vh;
-        top: 20%;
+        top: 60%;
         margin-left: 5%;
     }
 }

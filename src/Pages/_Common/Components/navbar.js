@@ -3,26 +3,53 @@
 
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
+import { Nav, Navbar as BootstrapNavbar, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import '../Stylesheets/navbar.css'
 import { NAVBAR_TABS } from '../../../Constants';
 
 export default class Navbar extends Component {
     
-    render() {
-        /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
-        var navbarCSSClasses = 'navbar sticky-top navbar-expand-lg navbar-dark navbar_background'
-        /*if(window.screen.width < 1500){
-            navbarCSSClasses = 'navbar sticky-top navbar-expand navbar-dark navbar-background'
-        }*/
-
+    renderDesktopNavbar(){
+         /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
         return (
-            <nav className={navbarCSSClasses}>
-                    {NAVBAR_TABS.map((item, index) => (
-                        <Tab name={item} key={index}/>
-                    ))}
+            <nav className='navbar sticky-top navbar-expand-lg navbar-dark navbar_background'>
+                {NAVBAR_TABS.map((item, index) => (
+                    <DesktopTab name={item} key={index}/>
+                ))}
             </nav>
         )
+    }
+
+    renderMobileNavbar(){
+        /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
+        return (
+            <BootstrapNavbar sticky='top' data-bs-theme='light' collapseOnSelect expand='lg' className = 'bootstrap_navbar'>
+                <BootstrapNavbar.Brand href='/'>
+                    <div className = 'navbar_logo_container'>
+                        <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo'/>
+                        <span className = 'navbar_text'>OYFA at UVA</span>
+                    </div>
+                </BootstrapNavbar.Brand>
+                <BootstrapNavbar.Toggle aria-controls='responsive-navbar-nav' />
+                <BootstrapNavbar.Collapse id='responsive-navbar-nav'>
+                    <Nav className='mr-auto navbar_text'>
+                        {NAVBAR_TABS.map((item, index) => {
+                            if (item !== '--logo') return <Nav.Link key={index} href={'/' + item}>{item}</Nav.Link>
+                        })}
+                    </Nav>
+                </BootstrapNavbar.Collapse>
+            </BootstrapNavbar>
+        )    
+    }
+
+    render() {
+        if(window.screen.width < 1000){
+            return this.renderMobileNavbar()
+        }
+        else{
+            return this.renderDesktopNavbar()
+        }
     }
 }
 
@@ -35,16 +62,19 @@ export default class Navbar extends Component {
 **            tab on the right side, linking to /{name}. You can make a separate link prop to go to a custom link
 **            if you need it.
 **  RETURNS:
-**      Tab component, either a small OYFA logo image or a list-item which links to an internal routed link.
+**      DesktopTab component: a small OYFA logo w/ caption or a list-item which links to an internal routed link.
 **==============================================================================================================*/
-class Tab extends Component{
+class DesktopTab extends Component{
     render(){
         const name = this.props.name
 
         /* if props.name specified as '--logo', return the oyfa logo with link to Home page */
         const logoTab =
             <Link to='/' className='navbar_react_link'>
-                <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo' />
+                <div className = 'navbar_logo_container'>
+                    <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo' />
+                    <span className = 'navbar_logo_caption'>OYFA at UVA</span>
+                </div>
             </Link>
 
         /* if props.name specified as as a String, return a text tab with link to /{name} */

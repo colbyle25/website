@@ -9,7 +9,7 @@ export default class LinkGallery extends Component{
 
         return(
             <div className = 'links_background'>
-                <div className = 'links_spacing'>
+                <div>
                     {LINKS.map((section, index) => (
                             <LinkSection key = {index} sectionTitle = {section.sectionTitle} links = {section.links} imgSrc = {section.imgSrc}/>
                     ))}

@@ -13,6 +13,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 10vh;
+    padding-top: 3vh;
     margin-bottom: -2vh;
 }
 
@@ -25,11 +26,7 @@
 
 .links_background{
     background-color: var(--off-white);
-    padding-bottom: 3%;
-}
-
-.links_spacing{
-    padding-top: 3%;
+    padding-bottom: 3vh;
 }
 
 .links_container{
@@ -75,15 +72,17 @@
 @media screen and (max-width : 1000px) /* Phone rules */
 {
     .link_section_heading{
-        font-size: 8vh;
+        font-size: 6vh;
         word-break:break-all;
-        margin-bottom: -3vh;
     }
     .link_container{
-        margin-bottom: -3%;
+        margin-bottom: -3vh;
     }
     .link_heading{
-        font-size: 4vh;
+        font-size: 3vh;
+    }
+    .link_paragraph{
+        font-size: 2.5vh;
     }
     .links_spacing{
         padding-top: 3%;

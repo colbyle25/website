@@ -43,7 +43,7 @@ export default class HalfTitle extends Component{
         if(this.props.newTab == 'true') newTab = '_blank'
         
         return(
-            <div>
+            <div className = 'half_title_container'>
                 <style>{brightnessStyle}</style>
                 <style>{positionStyle}</style>
 
