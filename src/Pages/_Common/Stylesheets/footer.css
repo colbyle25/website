@@ -62,4 +62,13 @@
         margin: 0 auto;
         flex-direction: column;
     }
+    .footer_social_media_footer_header{
+        font-size: 1em;
+    }
+    .footer_paragraph{
+        font-size: 1em;
+    }
+    .footer_disclaimer{
+        font-size: 1em;
+    }
 }

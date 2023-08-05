@@ -24,6 +24,7 @@
 }
 
 .navbar_text{
+    font-size: 2vh;
     margin-left: 5%;
     font-family: 'Playfair Display';
 }

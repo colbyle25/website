@@ -9,6 +9,7 @@
 /*=============Link Classes=================*/
 
 .link_section_heading{
+    text-decoration: underline;
     font-family: 'Playfair Display';
     font-weight: bold;
     text-align: center;
@@ -72,17 +73,19 @@
 @media screen and (max-width : 1000px) /* Phone rules */
 {
     .link_section_heading{
-        font-size: 6vh;
+        font-size: 4vh;
         word-break:break-all;
+        margin-bottom: -4vh;
     }
     .link_container{
         margin-bottom: -3vh;
     }
     .link_heading{
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
     .link_paragraph{
-        font-size: 2.5vh;
+        font-size: 2vh;
+        
     }
     .links_spacing{
         padding-top: 3%;

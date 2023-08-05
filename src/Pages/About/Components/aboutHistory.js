@@ -41,12 +41,12 @@ export default class History extends Component{
                     <p className = 'history_quote_author'> - Dr. Ron Labuguen</p>
                 </div>
 
-                {/* Image section */}
-                <div className = 'history_img_parent'>
+                {/* Image section - the idea was to have some historical photos here */}
+                {/*<div className = 'history_img_parent'>
                     <img className = 'history_img' src='https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490'/>
                     <img className = 'history_img' src='https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490'/>
                     <img className = 'history_img' src='https://cdn.myportfolio.com/9755d902-8051-452b-84dd-f728e491ca8f/88e00a32-ab93-4095-bc14-e7929e1c1989_rw_600.jpg?h=468a567abffadea77e4bd188805b3490'/>
-                </div>
+                </div>*/}
 
                 {/* Today section*/}
                 <h1 className = 'history_heading'>{currYear}</h1>

@@ -35,6 +35,16 @@ export const EVENTS_CALENDAR_SOURCE = 'https://calendar.google.com/calendar/embe
 export const LINKS =
     [
         { 
+            sectionTitle: 'Announcements',
+            links: 
+                [
+                    {header: 'New Member/Little Form', para: 'Stay tuned! Updating soon.', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfFcR1aBjCCLexKWykdAKzVqPkGgN0GuwfTPJm55d8GdGFcCQ/viewform'},
+                    {header: 'Returning Member/Big Form', para: 'Renew your OYFA membership and sign up for littles! Due August 21 at 11:59PM', link: 'https://forms.office.com/r/uUmenq0YaQ'},
+                    {header: 'OYFA Excellence Scholarship', para: 'The 2023 Scholarship is closed but stay tuned for 2024 school year', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfk7EZutPVbnjQcCzlXYK9H2rdDpbjVfWcS6TuAqvZs-b6NFQ/viewform'},
+                ]
+        },
+        
+        { 
             sectionTitle: 'OYFA Links',
             links: 
                 [
@@ -42,16 +52,6 @@ export const LINKS =
                     {header: 'OYFA 2023-2024 Events Google Calendar', para: 'Clear your calendar for our amazing events!', link: 'https://calendar.google.com/calendar/u/0?cid=Y19uMzRsOThkbGE2cW5vYWJkbG9ibmQzYXY3c0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t'},
                     {header: 'Week in OYFA (WIO) Sign-Up', para: 'Get our weekly newletter featuring announcements, news, puzzles, and fun tidbits!', link: 'http://eepurl.com/gBOWJv'},
                     /* This link is currently broken...not sure if an oyfa discord is even still running but look out for a new link! */ //{header: 'OYFA Discord', para: 'Play games with Oyfans', link: 'https://discord.gg/3EZgad'},
-                ]
-        },
-
-        { 
-            sectionTitle: 'Announcements',
-            links: 
-                [
-                    {header: 'New Member/Little Form', para: 'This form is no longer accepting submissions but stay tuned for the 2024 school year', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfFcR1aBjCCLexKWykdAKzVqPkGgN0GuwfTPJm55d8GdGFcCQ/viewform'},
-                    {header: 'Returning Member/Big Form', para: 'This form is no longer accepting submissions but stay tuned for the 2024 school year', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfB6XRt-OJHv0AfCFvx8-VJu6aSj_TVfq7zSLmvdtcC5tGS7Q/viewform'},
-                    {header: 'OYFA Excellence Scholarship', para: 'The 2023 Scholarship is closed but stay tuned for 2024 school year', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfk7EZutPVbnjQcCzlXYK9H2rdDpbjVfWcS6TuAqvZs-b6NFQ/viewform'},
                 ]
         },
 
@@ -328,7 +328,7 @@ export const OYFA_AGE = new Date().getFullYear() - 1988 + 1;
 export const NAVBAR_TABS = ['--logo', 'About', 'Events', 'Links', 'Leadership', 'Archives']
 
 /* Mailchimp WIO Root Form Posting Link, used in EmailSignup */
-export const MAILCHIMP_BASE_URL = 'https://oyfaatuva.us4.list-manage.com/subscribe/post-json?u=06c31be345165e241d2affc73&amp;id=11be915f14&amp;f_id=00ad07e9f0'
+export const MAILCHIMP_BASE_URL = 'https://oyfaatuva.us4.list-manage.com/subscribe/post-json?u=06c31be345165e241d2affc73&amp;id=11be915f14&amp;f_id=00ad07e9f0;tag=1785772'
 
 /* Github link, used in footer */
 export const GITHUB_LINK = 'https://github.com/colbyle25/website'

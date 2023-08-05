@@ -18,7 +18,7 @@ function EmailSignup(){
 
     const onSubmit = e => {
         e.preventDefault();
-        jsonp(`${MAILCHIMP_BASE_URL}&EMAIL=${email}`, { param: 'c' }, (_, data) => {
+        jsonp(`${MAILCHIMP_BASE_URL}&EMAIL=${email}&tags=1785772`, { param: 'c' }, (_, data) => {
             const { msg, result } = data
             alert('Check Your Email!')
         })
@@ -26,38 +26,31 @@ function EmailSignup(){
 
         return(
             <section>
-            <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
-            name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
-                {/* Start grid row */}
-                <div className="email_no_name_parent">
-                    {/* start grid column */}
-                    <div className = 'email_label_parent'>
-                        <label className='email_label'>
-                        Subscribe to WIO newsletter
-                        </label>
-                    </div>
-                    {/* end Grid column */}
+                <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
 
-                    {/* start grid column */}
-                    <div className = 'email_input_parent'>
-                        {/* Email input */ }
-                        <div className="form-outline form-white">
-                        <input type='email' name="EMAIL" value={email} id='mce-EMAIL' onChange={e=> setEmail(e.target.value)}
-                        placeholder = 'Email Address' className="form-control email_input" required />
+                    <div className="email_no_name_parent">
+                        <div className = 'email_label_parent'>
+                            <label className='email_label'>
+                            Subscribe to WIO newsletter
+                            </label>
+                        </div>
+
+                        <div className = 'email_input_parent'>
+                            {/* Email input */ }
+                            <div className="form-outline form-white">
+                            <input type='email' name="EMAIL" value={email} id='mce-EMAIL' onChange={e=> setEmail(e.target.value)}
+                            placeholder = 'Email Address' className="form-control email_input" required />
+                            </div>
+                        </div>
+
+                        <div className="email_button_parent">
+                            {/* Submit button */}
+                            <button type="submit" className="btn btn-outline-dark">
+                            Join
+                            </button>
                         </div>
                     </div>
-                    {/* end grid column */}
-
-                    {/* start grid column */}
-                    <div className="email_button_parent">
-                        {/* Submit button */}
-                        <button type="submit" className="btn btn-outline-dark">
-                        Join
-                        </button>
-                    </div>
-                    {/* end grid column */}
-                    </div>
-                {/* end grid row */}
                 </form>
             </section>
         )
@@ -71,7 +64,7 @@ function EmailSignupWithName(){
  
     const onSubmit = e => {
         e.preventDefault()
-        const nameUrl = `${MAILCHIMP_BASE_URL}&EMAIL=${email}&FNAME=${fName}&LNAME=${lName}&TAG=`
+        const nameUrl = `${MAILCHIMP_BASE_URL}&EMAIL=${email}&FNAME=${fName}&LNAME=${lName}&tags=1785772`
         jsonp(nameUrl, { param: 'c' }, (_, data) => {
             const { msg, result } = data
             alert('Check Your Email!')
@@ -83,10 +76,8 @@ function EmailSignupWithName(){
             <form onSubmit={onSubmit} method="post" id="mc-embedded-subscribe-form" 
             name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
 
-                {/* Start grid row */}
                 <div className="row email_center">
 
-                    {/* start grid column */}
                     <div className="col-md-10">
                         {/* Email input */ }
                         <div className="form-outline form-white">
@@ -110,7 +101,6 @@ function EmailSignupWithName(){
 
                         </div>
                     </div>
-                    {/* end grid column */}
 
                 </div>
 
