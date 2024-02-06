@@ -24,14 +24,16 @@
   <h3 align="center">OYFA Website - React</h3>
 
   <p align="center">
-    A website for the Organization of Young Filipino Americans, authored by 36th Webmasters 2023: Colby Le
+    A website for the Organization of Young Filipino Americans, authored by 36th Webmasters 2023: Colby Le, Sebastian Borromeo, and Christina Yang
     <br />
     <br />
     Though there have been previous OYFA websites, this particular iteration arose out of a need for a frameworked model. Previous sites were prone to spaghetti code and disorganization over time as the site expanded. The goal with this project was to provide reusable and adaptive components, enforce strict organization, write detailed documentation, and add the capabilities of Javascript and a modern web framework so that Webmasters of the future have no roadblocks for new features and rapid maintenance.
     <br />
     <br />
-    This website is designed to be not only a hub for all Oyfans, but as a model for all other student organizations interested in a website. In keeping with this goal, we have also produced a Quickstart Guide for anyone looking to produce a similar project.<a href="https://docs.google.com/document/d/1HpFqOiBeCmaiBkAtqW8r5TP6nRBN87xtmmukSb8xgnA/edit?usp=sharing" ><strong>View Quickstart Guide »</strong>
-    </a>
+    This website is designed to be not only a hub for all Oyfans, but as a model for all other student organizations interested in a website. In keeping with this goal, we have also produced a Quickstart Guide for anyone looking to produce a similar project.<a href="https://docs.google.com/document/d/1HpFqOiBeCmaiBkAtqW8r5TP6nRBN87xtmmukSb8xgnA/edit?usp=sharing" ><strong>View Quickstart Guide »</strong></a>
+    <br />
+    <br />
+    This repository is a fork of the original repo and project created by webmaster Colby Le. The following is the current website now deployed from OYFA's official GitHub to be accessed and managed by future Webmasters.
   </p>
 </div>
 <br />
@@ -153,8 +155,8 @@ See the [open issues](https://github.com/colbyle25/website/issues) for a full li
 <!-- CONTRIBUTING -->
 ## Contributing
 
-The OYFA Website will always be an open source project in line with its shared use amongst all Oyfans and peer student organizations.
-The Webmasters **greatly welcome** any admissible contributions which improve the user experience for all visitors and benefactors of the website.
+The OYFA Website will always be an open-source project in line with its shared use amongst all Oyfans and peer student organizations.
+The Webmasters **greatly welcome** any admissible contributions that improve the user experience for all visitors and benefactors of the website.
 
 Please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
@@ -182,9 +184,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Current OYFA Webmasters - [@oyfaatuva](https://www.instagram.com/oyfaatuva/) - oyfaatuvawebmasters@gmail.com
 
-Author - colby.le.623@gmail.com
+Original Author - colby.le.623@gmail.com
 
-Project Link: [https://github.com/colbyle25/website](https://github.com/colbyle25/website)
+Additional Authors - sebastiangborromeo@gmail.com, 	christinnayang@gmail.com
+
+Project Link: [https://github.com/oyfaatuva/oyfa-website](https://github.com/oyfaatuva/oyfa-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
