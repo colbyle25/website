@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 
 import Navbar from '../../_Common/Components/navbar';

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 
 import Navbar from '../../_Common/Components/navbar';
 import HalfTitle from '../../_Common/Components/halfTitle'

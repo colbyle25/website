@@ -7,7 +7,7 @@
 ** for API documentation on the react-bootstrap Carousel, visit https://react-bootstrap.netlify.app/docs/components/carousel/
 */
 
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import {Carousel} from 'react-bootstrap';
 import '../Stylesheets/homeTitle.css';

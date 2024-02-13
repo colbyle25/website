@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/eventsCalendar.css'
 import { OYFA_AGE, EVENTS_CALENDAR_SOURCE } from '../../../Constants'

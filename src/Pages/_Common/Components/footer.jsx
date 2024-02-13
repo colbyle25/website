@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import SocialMedia from './socialmedia';
 import EmailSignup from './emailsignup';
