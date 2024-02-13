@@ -3,8 +3,9 @@
 ** Conveniently we also set some global CSS rules to apply to all of our components, and set up our Routing to link
 ** each webpage. */
 
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import Home from './Pages/Home/Components/home'
 import About from './Pages/About/Components/about'
@@ -13,6 +14,7 @@ import Links from './Pages/Links/Components/links'
 import Leadership from './Pages/Leadership/Components/leadership'
 import Archives from './Pages/Archives/Components/archives'
 import LeadershipBio from './Pages/Leadership/Components/leadershipBio'
+import RootRouteComponent from './root'
 
 /* Set the browser tab title, also for SEO (so when Google queries searches for 'OYFA' this is what it finds) */
 document.title = "OYFA at UVA"
@@ -34,21 +36,49 @@ const globalStyles = `
 
 /* Our root is now pathed to all of our pages */
 
+const router = createBrowserRouter([
+  {
+      path: '/',
+      element: <RootRouteComponent />,
+      children: [
+          {
+              index: true,
+              element: <Home />,
+          },
+          {
+              path: 'about',
+              element: <About />,
+          },
+          {
+              path: 'events',
+              element: <Events />,
+          },
+          {
+              path: 'links',
+              element: <Links />,
+          },
+          {
+              path: 'leadership',
+              element: <Leadership />,
+          },
+          {
+              path: 'archives',
+              element: <Archives />,
+          },
+          {
+              path: 'bios',
+              element: <LeadershipBio />,
+          },
+      ]
+  }
+]);
+
 root.render(
   <>
-    <style>{globalStyles}</style>
-
-    <BrowserRouter>
-      <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Events' element={<Events />} />
-          <Route path='/Links' element={<Links />} />
-          <Route path='/Leadership' element={<Leadership />} />
-          <Route path='/Archives' element={<Archives />} />
-          <Route path='/Bios' element={<LeadershipBio />} /> {/*Bios is not on the Navbar but is linked on Leadership page*/}
-      </Routes>
-    </BrowserRouter>
+      <React.StrictMode>
+        <style>{globalStyles}</style>
+        <RouterProvider router={router}/>
+      </React.StrictMode>
   </>
 )
 
