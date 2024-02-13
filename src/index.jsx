@@ -3,7 +3,6 @@
 ** Conveniently we also set some global CSS rules to apply to all of our components, and set up our Routing to link
 ** each webpage. */
 
-import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 

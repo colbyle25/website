@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/homeTestimonies.css'
 import { Carousel } from 'react-bootstrap'

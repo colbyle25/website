@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/aboutHistory.css'
 import { ABOUT_QUOTE_TEXT, ABOUT_PRESENT_TEXT } from '../../../Constants'

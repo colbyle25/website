@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../Stylesheets/socialmedia.css'
