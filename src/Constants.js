@@ -362,9 +362,8 @@ export const ABOUT_PRESENT_TEXT = `OYFA is a multi-generational organization now
 
 /*=================ARCHIVES=====================================================================*/
 /* File info which will be rendered on the Archives page */
-export const FILES = 
 [
-    {name: 'OYFA Constitution', imgSrc: './Images/Archives/Archives_Preview_Constitution.png', link: 'https://docs.google.com/document/d/1haR6qSnU0WI45C-wj2Ez2XEHqMeekQ3Sk_eB_Vyu74M/edit?usp=sharing'},
+    {name: 'OYFA Constitution', imgSrc: './Images/Archives/Archives_Preview_Constitution.png', link: './Files/OYFAConsitution.pdf'},
     {name: 'B&C Archive', imgSrc: './Images/Archives/Archives_Preview_B&C_Archive.png', link: './Files/Archives_B&C_Archive.pdf'},
     {name: 'Solidarity Statement', imgSrc: './Images/Archives/Archives_Preview_Solidarity_Statement.png', link: './Files/Archives_Solidarity_Statement.pdf'}
 ]
