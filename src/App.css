@@ -1,0 +1,7 @@
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
