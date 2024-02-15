@@ -25,7 +25,7 @@ export default class Introduction extends Component{
         //is it after April? increment the year
         const date = new Date()
         const numOfBnCs = date.getYear() + (date.getMonth() > 4) - 88
-        const append = 'th'
+        let append = 'th'
         if(numOfBnCs % 10 == 1) append = 'st' 
         else if(numOfBnCs % 10 == 2) append = 'nd'
         else if(numOfBnCs % 10 == 3) append = 'rd'
