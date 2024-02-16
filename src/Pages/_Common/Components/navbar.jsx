@@ -79,7 +79,7 @@ class DesktopTab extends Component{
 
         /* if props.name specified as as a String, return a text tab with link to /{name} */
         const textTab = 
-        <Link to={'/'+name} className='navbar_react_link'>                
+        <Link to={'/'+name.toLowerCase()} className='navbar_react_link'>                
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item navbar_tab_content">{name}</li>
             </ul>
