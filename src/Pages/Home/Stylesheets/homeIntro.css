@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
-
-:root{
-    --off-white: #e8e5e0;
-}
-
 .intro_parent{
     position: relative;
     width: 100%;
@@ -36,7 +30,7 @@
 }
 
 .intro_heading{
-    font-family: 'Playfair Display';
+    font-family: 'Poppins';
     /*font-size: 8em;*/
     font-size: 15vh;
     font-weight: bold;
@@ -46,7 +40,7 @@
 }
 
 .intro_get_involved_heading{
-    font-family: 'Playfair Display';
+    font-family: 'Poppins';
     /*font-size: 6em;*/
     font-size: 14vh;
     font-weight: bold;

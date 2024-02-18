@@ -1,7 +1,28 @@
+@import '../node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,200;0,300;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root{
+    --off-white: #e8e5e0;
+    --offer-white: #dad5cd;
+}
+
 html {
     scroll-behavior: auto !important;
+    font-size: 100%;
 }
 
 body {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
+
+    font-family: 'Open Sans', sans-serif;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    height: auto;
+    user-select: none;
 }

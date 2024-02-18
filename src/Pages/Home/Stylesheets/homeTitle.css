@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans|Noto+Serif');
-
-:root{
-    --off-white: #e8e5e0;
-}
-
 /* dimming the carousel images to make the title pop, depending on the pictures you choose you may want to change this*/
 .title_img{
     filter: brightness(70%);
