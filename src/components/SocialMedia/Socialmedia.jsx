@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../Stylesheets/socialmedia.css'
+import './Socialmedia.css'
 
 /* allows you to use all icons, check here for full list: https://fontawesome.com/search?o=r&f=brands */
 import { library } from '@fortawesome/fontawesome-svg-core'

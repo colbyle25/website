@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import '../Stylesheets/leadershipIntro.css';
 import { OYFA_AGE, B_C_YOUTUBE_EMBED_ID } from '../../../Constants';
-import YoutubeEmbed from '../../_Common/Components/youtubeEmbed';
+import YoutubeEmbed from '../../../components/YoutubeEmbed/YoutubeEmbed';
 
 export default class LeadershipIntro extends Component{
     render(){

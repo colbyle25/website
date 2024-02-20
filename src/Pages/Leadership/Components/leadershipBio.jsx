@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import '../Stylesheets/leadershipBio.css'
 import Navbar from '../../../../Trash/navbar'
-import Footer from '../../_Common/Components/footer'
+import Footer from '../../../components/Footer/Footer'
 import {BOARD, COUNCIL} from '../../../Constants';
 
 /********************************************************************************************************************

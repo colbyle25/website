@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import '../Stylesheets/youtubeEmbed.css'
+import './YoutubeEmbed.css'
 
 /* visit the youtube video you want to display, click share, click embed
 ** then pass the embedId as well as your preferred embedWidth and embedHeight
