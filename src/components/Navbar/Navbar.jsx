@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from "react-responsive";
-import "./Navbar.css";
+import classes from "./Navbar.module.css";
 import useScrollPosition from "../../hooks/useScrollPosition";
 
 /**
  * USAGE GUIDE: to be made... I am lazy
  */
 
+//TODO: This should be dependant on window ;-;;;;
 const SCROLL_POSITION_FOR_TRANSITION = 450; //Scroll Position = 0 is the top of the page (is this measured in pixels??) 
 const MAX_WIDTH = "1000px" //Maximum window width to classify screen as "Mobile"
 
@@ -39,20 +40,20 @@ export default function Navbar({ logoImgSrc }) {
     };
 
     return (
-        <header className="header">
-            <nav className={`nav ${scrollPosition > SCROLL_POSITION_FOR_TRANSITION ? "nav_bg_color" : ""}`}>
-                <NavLink to="/" className="nav_logo">
+        <header className={classes.header}>
+            <nav className={classes.nav + ` ${scrollPosition > SCROLL_POSITION_FOR_TRANSITION ? classes.nav_bg_color : ""}`}>
+                <NavLink to="/" className={classes.nav_logo}>
                     <img src={logoImgSrc}/>
                 </NavLink>
                 {isMobile && (
-                    <div className="nav_toggle" id="nav-toggle" onClick={toggleMenu}>
+                    <div className={classes.nav_toggle} id="nav-toggle" onClick={toggleMenu}>
                         <FontAwesomeIcon icon={faBars} />
                     </div>
                 )}
                 { isMobile ? (
-                    <div className={`nav_menu ${isMenuOpen ? "show-menu" : ""}`} id="nav-menu">
+                    <div className={classes.nav_menu + " " + (isMenuOpen ? classes.show_menu : "")} id="nav-menu">
                         <NavBarLinks navBarLinksDict={navbar} isMobile={isMobile} closeMobileMenu={closeMobileMenu}/>
-                        <div className="nav_close" id="nav-close" onClick={toggleMenu}>
+                        <div className={classes.nav_close} id="nav-close" onClick={toggleMenu}>
                             <FontAwesomeIcon icon={faXmark} />
                         </div>
                     </div>
@@ -67,7 +68,7 @@ export default function Navbar({ logoImgSrc }) {
 
 function NavBarLinks({ navBarLinksDict, closeMobileMenu }) {
     return (
-        <ul className="nav_list">
+        <ul className={classes.nav_list}>
             {Object.keys(navBarLinksDict).map((componentKey) => (
                 <NavBarLink key={componentKey} {...navBarLinksDict[componentKey]} closeMobileMenu={closeMobileMenu} />
             ))}
@@ -77,8 +78,8 @@ function NavBarLinks({ navBarLinksDict, closeMobileMenu }) {
 
 function NavBarLink( { name, url, closeMobileMenu } ) {
     return (
-        <li className="nav__item">
-            <NavLink to={url.toLowerCase()} className="nav_link"  onClick={closeMobileMenu}>
+        <li>
+            <NavLink to={url.toLowerCase()} className={classes.nav_link}  onClick={closeMobileMenu}>
                 {name.toUpperCase()}
             </NavLink>
         </li>
