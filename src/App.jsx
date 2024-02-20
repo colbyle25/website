@@ -2,13 +2,13 @@ import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-ro
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 
-import Home from './Pages/Home/Components/home'
-import About from './Pages/About/Components/about'
-import Events from './Pages/Events/Components/events'
-import Links from './Pages/Links/Components/links'
-import Leadership from './Pages/Leadership/Components/leadership'
-import Archives from './Pages/Archives/Components/archives'
-import LeadershipBio from './Pages/Leadership/Components/leadershipBio'
+import Home from './pages/Home/Components/home'
+import About from './pages/About/Components/about'
+import Events from './pages/Events/Components/events'
+import Links from './pages/Links/Components/links'
+import Leadership from './pages/Leadership/Components/leadership'
+import Archives from './pages/Archives/Components/archives'
+import LeadershipBio from './pages/Leadership/Components/leadershipBio'
 import RootRouteComponent from './root'
 
 /* If adding new pages, add a new route with a relative link pointing to the new page and 
