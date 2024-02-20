@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/leadershipIntro.css';
 import { OYFA_AGE, B_C_YOUTUBE_EMBED_ID } from '../../../Constants';
 import YoutubeEmbed from '../../_Common/Components/youtubeEmbed';

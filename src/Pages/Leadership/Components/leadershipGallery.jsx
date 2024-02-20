@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/leadershipGallery.css'
 import { BOARD, COUNCIL } from '../../../Constants'
 /* react-router does not natively support scrolling to specific page sections so we use this add-on package */

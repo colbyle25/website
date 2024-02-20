@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 
 import HalfTitle from '../../_Common/Components/halfTitle';
 

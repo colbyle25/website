@@ -2,7 +2,6 @@
 ** Managing the tabs requires passing props to the defined Tab class */
 
 import { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar as BootstrapNavbar, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import '../Stylesheets/navbar.css'

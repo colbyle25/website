@@ -8,7 +8,6 @@
 */
 
 import {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import {Carousel} from 'react-bootstrap';
 import '../Stylesheets/homeTitle.css';
 
