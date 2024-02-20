@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/leadershipBio.css'
 import Navbar from '../../_Common/Components/navbar'
 import Footer from '../../_Common/Components/footer'

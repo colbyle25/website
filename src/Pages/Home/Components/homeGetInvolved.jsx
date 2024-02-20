@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import SocialMedia from '../../_Common/Components/socialmedia'
 import YoutubeEmbed from '../../_Common/Components/youtubeEmbed'
 import {EmailSignupWithName} from '../../_Common/Components/emailsignup'

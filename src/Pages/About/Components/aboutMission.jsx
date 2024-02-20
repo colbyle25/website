@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/aboutMission.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

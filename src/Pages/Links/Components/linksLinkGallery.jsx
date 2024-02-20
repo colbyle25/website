@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import '../Stylesheets/linksLinkGallery.css';
 import { LINKS } from '../../../Constants';
 

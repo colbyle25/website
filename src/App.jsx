@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 
 import Home from './Pages/Home/Components/home'

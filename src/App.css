@@ -5,10 +5,11 @@
 :root{
     --off-white: #e8e5e0;
     --offer-white: #dad5cd;
+    scroll-behavior: auto;
 }
 
 html {
-    scroll-behavior: auto !important;
+    
     font-size: 100%;
 }
 
