@@ -1,68 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
+:root {
+    --navbar-height: 3.5rem;
+    --text-color: white;
+    --text-highlight-color: hsl(47, 88%, 62%);
 
-:root{
-    --off-white: #e8e5e0;
+    --navbar-color: rgb(32, 32, 32);
+    --buttons-color: white;
+
+    --text-font: "Poppins", sans-serif;
+    --font-size: 1.3rem;
+    --text-font-weight: 200;
+
+    --z-fixed: 100;
 }
 
-.navbar_logo_container{
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: calc(var(--navbar-height) + 1rem);
+    font-size: var(--font-size);
+    font-family: var(--text-font);
+    backdrop-filter: blur(16px);
+
+    transition: background-color 0.25s linear, border-bottom 0.25s linear;
+    border-bottom: 1px white solid;
 }
 
-.navbar_logo_caption{
-    font-family: 'Playfair Display';
-    margin-left: 2%;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: var(--off-white);
+.nav_bg_color {
+    background-color: var(--navbar-color);
+    border-bottom: 1px var(--navbar-color) solid;
 }
 
-.bootstrap_navbar{
-    background-color: var(--off-white);
+.nav ul { /*CSS Pre-processor to nest these among other things to clean css?*/
+    list-style: none;
 }
 
-.navbar_text{
-    font-size: 2vh;
-    margin-left: 5%;
-    font-family: 'Playfair Display';
-}
-
-.navbar_logo{
-    margin-left: 2%;
-    width: 5%;
-    alt: 'Oyfa Logo';
-}
-
-.navbar_react_link{
+.nav a {
     text-decoration: none;
 }
 
-.navbar_tab_content{
-    font-family: 'Playfair Display';
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: var(--off-white);
+.nav_logo {
+    padding-top: 3px; /*TODO: Make Logo a normal square */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.navbar_background{
-    background-color: black;
+.nav_logo img {
+    width: 50px;
+}
+   
+.nav_link {
+    color: var(--text-color);
+    font-weight: var(--text-font-weight);
+    transition: color 0.4s;
+}
+   
+.nav_link:hover {
+    color: var(--text-highlight-color);
+}
+   
+.nav_close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
 }
 
-.navbar_hamburger_button{
-    color: white;
+.nav_toggle {
+    margin-right: 30px;
+}
+   
+.nav_toggle,
+.nav_close {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--buttons-color);
+    cursor: pointer;
+}
+ 
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-right: 50px;
+    margin-bottom: 0; /*TODO: Find out what style is giving ul margin-bottom of 1 rem */
+    column-gap: 4rem;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-@media screen and (max-width : 1000px) /* Phone Rules */
-{
-    .navbar_logo{
-        margin-left: 2vh;
-        width: 4vh;
+.nav_menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--navbar-color);
+    width: 50%;
+    height: 100vh;
+    padding: 6rem 3rem 0;
+    transition: right 0.4s;
+}
+
+@media screen and (max-width: 1000px) { /*TODO: preprocessor to make this variable */
+    .nav {
+        justify-content: space-between;
     }
-    .navbar_tab_content{
-        font-size: 2vh;
-        color: var(--off-white);
-    }   
+    
+    .nav_toggle, 
+    .nav_close {
+        display: block;
+    }
+    
+    .nav_list {
+        flex-direction: column;
+        row-gap: 2.5rem;
+    } 
 }
+
+.show-menu {
+    right: 0;
+}
+  

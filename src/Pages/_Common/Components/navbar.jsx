@@ -1,94 +1,86 @@
-/* this Navbar class will be called on every page 
-** Managing the tabs requires passing props to the defined Tab class */
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
+import { useMediaQuery } from "react-responsive";
+import "../Stylesheets/navbar.css";
+import useScrollPosition from "../../../useScrollPosition";
 
-import { Component } from 'react'
-import { Nav, Navbar as BootstrapNavbar, NavDropdown } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
-import '../Stylesheets/navbar.css'
-import { NAVBAR_TABS } from '../../../Constants';
+/**
+ * USAGE GUIDE: to be made... I am lazy
+ */
 
-export default class Navbar extends Component {
-    
-    renderDesktopNavbar(){
-         /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
-        return (
-            <nav className='navbar sticky-top navbar-expand-lg navbar-dark navbar_background'>
-                {NAVBAR_TABS.map((item, index) => (
-                    <DesktopTab name={item} key={index}/>
-                ))}
-            </nav>
-        )
-    }
+const SCROLL_POSITION_FOR_TRANSITION = 450; //Scroll Position = 0 is the top of the page (is this measured in pixels??) 
+const MAX_WIDTH = "1000px" //Maximum window width to classify screen as "Mobile"
 
-    renderMobileNavbar(){
-        /* for each item in this array, dynamically render a tab from the NAVBAR_TABS array into the nav component */
-        return (
-            <BootstrapNavbar sticky='top' data-bs-theme='light' collapseOnSelect expand='lg' className = 'bootstrap_navbar'>
-                <BootstrapNavbar.Brand href='/'>
-                    <div className = 'navbar_logo_container'>
-                        <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo'/>
-                        <span className = 'navbar_text'>OYFA at UVA</span>
+//Current navbar tabs
+//TODO: abstract all these preset values away as props to make navbar more flexible 
+const navbar = {
+    about: { name: "ABOUT", url: "/about"},
+    events: { name: "EVENTS", url: "/events"},
+    links: { name: "LINKS", url: "/links"},
+    leadership: { name: "LEADERSHIP", url: "/leadership"},
+    archives: { name: "ARCHIVES", url: "/archives"},
+};
+
+export default function Navbar({ logoImgSrc }) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const isMobile = useMediaQuery({ maxWidth: MAX_WIDTH });
+    const scrollPosition = useScrollPosition()
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        if (isMobile) {
+            setIsMenuOpen(false);
+        }
+    };
+
+    return (
+        <header className="header">
+            <nav className={`nav ${scrollPosition > SCROLL_POSITION_FOR_TRANSITION ? "nav_bg_color" : ""}`}>
+                <NavLink to="/" className="nav_logo">
+                    <img src={logoImgSrc}/>
+                </NavLink>
+                {isMobile && (
+                    <div className="nav_toggle" id="nav-toggle" onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} />
                     </div>
-                </BootstrapNavbar.Brand>
-                <BootstrapNavbar.Toggle aria-controls='responsive-navbar-nav' />
-                <BootstrapNavbar.Collapse id='responsive-navbar-nav'>
-                    <Nav className='mr-auto navbar_text'>
-                        {NAVBAR_TABS.map((item, index) => {
-                            if (item !== '--logo') return <Nav.Link key={index} href={'/' + item}>{item}</Nav.Link>
-                        })}
-                    </Nav>
-                </BootstrapNavbar.Collapse>
-            </BootstrapNavbar>
-        )    
-    }
+                )}
+                { isMobile ? (
+                    <div className={`nav_menu ${isMenuOpen ? "show-menu" : ""}`} id="nav-menu">
+                        <NavBarLinks navBarLinksDict={navbar} isMobile={isMobile} closeMobileMenu={closeMobileMenu}/>
+                        <div className="nav_close" id="nav-close" onClick={toggleMenu}>
+                            <FontAwesomeIcon icon={faXmark} />
+                        </div>
+                    </div>
 
-    render() {
-        if(window.screen.width < 1000){
-            return this.renderMobileNavbar()
-        }
-        else{
-            return this.renderDesktopNavbar()
-        }
-    }
+                ) : (
+                    <NavBarLinks navBarLinksDict={navbar} isMobile={isMobile} closeMobileMenu={closeMobileMenu}/>
+                )}
+            </nav>
+    </header>
+    );
 }
 
-/*==USAGE GUIDE===================================================================================================
-**  DESCRIPTION:
-**      Renders a single tab to go in the Navbar. There are two options, the so-called "logo tab" and "text tab."
-**      pass '--logo' as name prop to render the "logo tab", otherwise render a "text tab" with {name} as the text.
-**  PROPS:
-**      name: string: either '--logo' for the logo for Home on the left side of the navbar, or the name of a text
-**            tab on the right side, linking to /{name}. You can make a separate link prop to go to a custom link
-**            if you need it.
-**  RETURNS:
-**      DesktopTab component: a small OYFA logo w/ caption or a list-item which links to an internal routed link.
-**==============================================================================================================*/
-class DesktopTab extends Component{
-    render(){
-        const name = this.props.name
+function NavBarLinks({ navBarLinksDict, closeMobileMenu }) {
+    return (
+        <ul className="nav_list">
+            {Object.keys(navBarLinksDict).map((componentKey) => (
+                <NavBarLink key={componentKey} {...navBarLinksDict[componentKey]} closeMobileMenu={closeMobileMenu} />
+            ))}
+        </ul>
+    );
+}
 
-        /* if props.name specified as '--logo', return the oyfa logo with link to Home page */
-        const logoTab =
-            <Link to='/' className='navbar_react_link'>
-                <div className = 'navbar_logo_container'>
-                    <img src='./Images/_Common/Navbar_OYFA_Logo.png' className = 'navbar_logo' />
-                    <span className = 'navbar_logo_caption'>OYFA at UVA</span>
-                </div>
-            </Link>
-
-        /* if props.name specified as as a String, return a text tab with link to /{name} */
-        const textTab = 
-        <Link to={'/'+name.toLowerCase()} className='navbar_react_link'>                
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item navbar_tab_content">{name}</li>
-            </ul>
-        </Link>;
-
-        /* conditional logic to return logo or text tab */
-        return(
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                {name == '--logo' ? logoTab : textTab} 
-            </div>
-        )
-    }
+function NavBarLink( { name, url, closeMobileMenu } ) {
+    return (
+        <li className="nav__item">
+            <NavLink to={url.toLowerCase()} className="nav_link"  onClick={closeMobileMenu}>
+                {name.toUpperCase()}
+            </NavLink>
+        </li>
+    )
 }

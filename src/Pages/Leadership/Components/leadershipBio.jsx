@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../Stylesheets/leadershipBio.css'
-import Navbar from '../../_Common/Components/navbar'
+import Navbar from '../../../../Trash/navbar'
 import Footer from '../../_Common/Components/footer'
 import {BOARD, COUNCIL} from '../../../Constants';
 
