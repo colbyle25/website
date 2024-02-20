@@ -1,7 +1,7 @@
 import {Component} from 'react'
-import SocialMedia from '../../_Common/Components/socialmedia'
-import YoutubeEmbed from '../../_Common/Components/youtubeEmbed'
-import {EmailSignupWithName} from '../../_Common/Components/emailsignup'
+import SocialMedia from '../../../components/SocialMedia/Socialmedia'
+import YoutubeEmbed from '../../../components/YoutubeEmbed/YoutubeEmbed'
+import {EmailSignupWithName} from '../../../components/Emailsignup/Emailsignup'
 import '../Stylesheets/homeGetInvolved.css'
 import * as Constants from '../../../Constants'
 

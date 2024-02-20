@@ -1,8 +1,8 @@
 import {Component} from 'react'
-import SocialMedia from './socialmedia';
-import EmailSignup from './emailsignup';
-import '../Stylesheets/footer.css'
-import { SOCIAL_MEDIA_HANDLES_NO_TEXT, GITHUB_LINK } from '../../../Constants';
+import SocialMedia from '../SocialMedia/Socialmedia';
+import EmailSignup from '../Emailsignup/Emailsignup';
+import './Footer.css'
+import { SOCIAL_MEDIA_HANDLES_NO_TEXT, GITHUB_LINK } from '../../Constants';
 
 /********************************************************************************************************************
 ** This file renders the Footer component, which is a common component that appears on all pages. It contains two

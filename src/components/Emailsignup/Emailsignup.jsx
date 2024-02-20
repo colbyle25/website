@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import jsonp from 'jsonp'
-import '../Stylesheets/emailsignup.css'
-import { MAILCHIMP_BASE_URL } from '../../../Constants'
+import './Emailsignup.css'
+import { MAILCHIMP_BASE_URL } from '../../Constants'
 
 /* if you need to replicate mailchimp integration with a new form design, tutorial at
 ** https://blog.afrieirham.com/how-to-integrate-mailchimp-with-react

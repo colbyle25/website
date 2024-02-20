@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import { Link } from 'react-router-dom';
-import '../Stylesheets/halfTitle.css'
+import './HalfTitle.css'
 
 /* This is a common title panel which occupies 50% screen height; appears on all pages except Home.
 

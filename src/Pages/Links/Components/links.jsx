@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import HalfTitle from '../../_Common/Components/halfTitle'
+import HalfTitle from '../../../components/HalfTitle/HalfTitle'
 
 import LinkGallery from './linksLinkGallery';
 
