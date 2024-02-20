@@ -9,6 +9,7 @@ import { SOCIAL_MEDIA_HANDLES_NO_TEXT, GITHUB_LINK } from '../../Constants';
 ** sections, one with some social media buttons and a WIO signup form, the other with some fine print text and links.
 ********************************************************************************************************************/
 
+{/*TODO: Something in Footer is overflowing and causing a white bar on the right side of mobile screens */}
 export default class Footer extends Component{
 
     render(){
