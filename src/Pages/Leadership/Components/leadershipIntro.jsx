@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../Stylesheets/leadershipIntro.css';
+import '../Stylesheets/LeadershipIntro.css';
 import { OYFA_AGE, B_C_YOUTUBE_EMBED_ID } from '../../../Constants';
 import YoutubeEmbed from '../../../components/YoutubeEmbed/YoutubeEmbed';
 
@@ -12,16 +12,13 @@ export default class LeadershipIntro extends Component{
 
         var YoutubeComponent = <></>
         if(B_C_YOUTUBE_EMBED_ID != '') 
-            var YoutubeComponent = <YoutubeEmbed embedId={B_C_YOUTUBE_EMBED_ID} embedWidth='50%' embedHeight='440px'/>
+            var YoutubeComponent = <div className='leadership_youtube_container'><YoutubeEmbed embedId={B_C_YOUTUBE_EMBED_ID} embedWidth='50%' embedHeight='440px'/></div>
 
 
         return(
             <div className='leadership_intro_background'>
-                <h1 className = 'leadership_heading'>{OYFA_AGE + append} B&C</h1>
-        
-                <div className='leadership_youtube_container'>
-                    {YoutubeComponent}
-                </div>
+                <h1 className = 'leadership_heading'>{OYFA_AGE + append} Board and Council</h1>        
+                {YoutubeComponent}
             </div>
         )
     }
