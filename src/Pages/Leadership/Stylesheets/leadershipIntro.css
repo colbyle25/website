@@ -1,8 +1,8 @@
 .leadership_heading{
-    font-family: 'Playfair Display';
-    padding-top: 3%;
+    padding: 2%;
     font-size: 16vh;
     font-weight: bold;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -13,7 +13,6 @@
 @media screen and (max-width : 1000px) /* Phones */
 {
     .leadership_heading{
-        font-family: 'Playfair Display';
         padding-top: 3%;
         font-size: 8vh;
         font-weight: bold;
