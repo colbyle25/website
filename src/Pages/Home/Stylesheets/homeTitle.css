@@ -9,7 +9,7 @@
 
 /* dimming the carousel images to make the title pop, depending on the pictures you choose you may want to change this*/
 .title_img_container {
-    filter: brightness(70%);
+    filter: brightness(80%);
     height: 800px;
 }
 

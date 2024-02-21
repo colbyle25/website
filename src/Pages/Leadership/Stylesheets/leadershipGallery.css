@@ -1,16 +1,15 @@
 /*=============Gallery-Wide Classes=================*/
 
 .gallery_heading{
-    font-family: 'Playfair Display';
     padding-top: 3%;
     margin-bottom: 4%;
-    font-size: 14vh;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
 }
 
 .gallery_background{
-    background-color: var(--offer-white);
+    background-color: var(--off-white);
 }
 
 /*=============Person Classes=================*/
@@ -25,26 +24,30 @@
 
 /* class for person div container */
 .person_img_container{
+    max-width: 320px;
+    max-height: 320px;
     display: flex;
     margin: 0 auto;
     overflow: hidden;
+    filter: drop-shadow(rgba(0, 0, 0, 0.08) 6px 6px 10px);
+    border-radius: 4px;
 }
 
 /* class for person img. you will probably want to adjust the width depending on what pics historic provides that year */
 .person_img_container img{
-    max-width: 50vh;
+    width: 100%;
+    height: 100%;
     transition: transform 0.5s;
 }
 
 /* zoom on hover animation for person img */
 .person_img_container img:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 /* force text to wrap */
 /* you will probably want to adjust the width depending on what pics historic provides that year */
 .person_text_container{
-    max-width: 55vh;
     word-wrap: break-word;
     text-align: center;
 }
@@ -52,38 +55,35 @@
 /* create buffer of space between person information */
 .person_info_container{
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .person_name{
-    font-family: 'Playfair Display';
-    font-size: 2em;
-    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
     color: black;
     margin-top: 5%;
 }
 
 .person_major{
-    font-family: 'Open Sans';
     font-size: 1.5em;
     color: black;
     margin-top: 5%;
 }
 
 .person_email{
-    font-family: 'Open Sans';
     font-size: 1.3em;
     color: black;
     margin-top: 5%;
 }
 
 .person_title{
-    font-family: 'Playfair Display';
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+    font-weight: 300;
     color: black;
-    margin-top: 5%;
 }
 
 .committee_row_container{
@@ -91,29 +91,26 @@
 }
 
 .committee_grid_container{
-    padding-bottom: 5%;
-    width: 95%;
-    display: flex;
-    margin: 0 auto;
+    width: 70%;
 }
 
 .person_row{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media screen and (max-width : 1000px) /* Phone Rules */
 {
-    .gallery_heading{
-        font-size: 8vh;
-    }
-    .person_img_container img{
-        max-width: 40vh;
-        transition: transform 0.5s;
-    }
     .person_text_container{
-        width: 40vh;
+        width: 50vw;
         word-wrap: break-word;
         text-align: center;
+    }
+
+    .person_img_container{
+        width: 50vw;
+        max-width: 500px;
+        max-height: 500px;
     }
 }

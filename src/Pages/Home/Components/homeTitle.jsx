@@ -36,20 +36,26 @@ export default class TitleScreen extends Component{
             {
                 imgSrc: imgDir + 'oyfa_volleyball_IMs.jpg',
                 captionHeader: 'Beach Volleyball IM Team',
-                captionPara: 'Join Chilling',
+                captionPara: 'Join Chilling Out with OYFA',
                 link: 'https://www.facebook.com/groups/596905140414588/'
-            },
-            {
-                imgSrc: imgDir + 'Title_First_Year_Modern.jpeg',
-                captionHeader: '1st Year Modern, Barrio 2023',
-                captionPara: 'Watch the performance',
-                link: 'https://www.youtube.com/watch?v=zWFKvAuphp8&ab_channel=OYFAatUVA'
             },
             {
                 imgSrc: imgDir + 'Title_Fourth_Year_Modern.jpeg',
                 captionHeader: '4th Year Modern, Barrio 2023',
                 captionPara: 'View more pictures',
                 link: 'https://uvaoyfa.myportfolio.com/oyfa-2022-2023'
+            },
+            {
+                imgSrc: imgDir + 'culture.jpg',
+                captionHeader: 'Taste of Barrio',
+                captionPara: 'Join Barrio !',
+                link: ''
+            },
+            {
+                imgSrc: imgDir + 'Title_First_Year_Modern.jpeg',
+                captionHeader: '1st Year Modern, Barrio 2023',
+                captionPara: 'Watch the performance',
+                link: 'https://www.youtube.com/watch?v=zWFKvAuphp8&ab_channel=OYFAatUVA'
             },
             //continue as you see fit
         ) 

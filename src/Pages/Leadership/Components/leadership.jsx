@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import HalfTitle from '../../../components/HalfTitle/HalfTitle';
 
-import LeadershipGallery from './leadershipGallery';
+import LeadershipGallery from './LeadershipGallery';
 import LeadershipIntro from './LeadershipIntro';
 
 /* Main export file to index that combines all "leadership" components */
