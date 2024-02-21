@@ -11,7 +11,7 @@ export default class Links extends Component{
         return(
             <div>
                 <HalfTitle header = 'Links' imgSrc = './Images/Links/Links_Title_Culturefest.jpeg'
-                brightness={80} position={35} />
+                brightness={80} position={25} />
                 <LinkGallery />
             </div>
         )

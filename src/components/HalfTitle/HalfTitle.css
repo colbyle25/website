@@ -1,32 +1,33 @@
 .half_title_container{
-    position: relative;
+    background-color: black;
+    height: 400px;
 }
 
 .half_title_heading{
     position: absolute;
-    font-family: 'Playfair Display';
-    /*font-size: 12em;*/
-    font-size: 18vh;
-    word-break:break-all;    
+    font-family: 'Poppins';
     font-weight: bold;
-    top: 10%;
+    font-size: 6rem;
+    word-break: break-all;    
+    top: 120px;
     margin-left: 5%;
     color: var(--off-white);
 }
 
 .half_title_img{
     width: 100%;
-    height: 50vh;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 .half_title_caption{
     position: absolute;
-    font-family: 'Playfair Display';
-    /*  font-size: 3em;  */
-    font-size: 7vh;
-    top: 70%;
-    margin-left: 5%;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 2.1rem;
+    top: 220px;
+    margin-left: 5.5%;
     color: var(--off-white);
 }
 
@@ -34,20 +35,22 @@
 {
     /* The half title looks better as a one-third title for mobile, smaller font */
     .half_title_heading{
-        font-size: 8vh;
-        word-break:break-all;   
+        font-size: 10vw;
         font-weight: bolder; 
-        top: 5%;
         margin-left: 5%;
     }
 
-    .half_title_img{
-        height: 30vh;
+    .half_title_container{
+        height: 300px;
+    }
+
+    .half_title_heading{
+        top: 100px;
+        bottom: 0;
     }
 
     .half_title_caption{
-        font-size: 3.5vh;
-        top: 60%;
-        margin-left: 5%;
+        font-size: 1.5rem;
+        top: 200px;
     }
 }

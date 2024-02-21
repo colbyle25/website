@@ -1,6 +1,8 @@
 import {Component} from 'react'
 import { Link } from 'react-router-dom';
 import './HalfTitle.css'
+import Vignette from '../../ui/Vignette/Vignette';
+import FadeOnLoadImg from '../../ui/FadeOnLoadImg/FadeOnLoadImg';
 
 /* This is a common title panel which occupies 50% screen height; appears on all pages except Home.
 
@@ -45,8 +47,9 @@ export default class HalfTitle extends Component{
             <div className = 'half_title_container'>
                 <style>{brightnessStyle}</style>
                 <style>{positionStyle}</style>
-
-                <img src = {this.props.imgSrc} className = 'half_title_img half_title_img_brightness half_title_img_position'/>
+                <FadeOnLoadImg imgPath={this.props.imgSrc} className='half_title_img half_title_img_brightness half_title_img_position'/>
+                {/* <img src = {this.props.imgSrc} className = 'half_title_img half_title_img_brightness half_title_img_position fade_in_image'/> */}
+                <Vignette/>
                 <h1 className ='half_title_heading'>{this.props.header}</h1>
                 <Link to={this.props.captionLink} target={newTab}>
                     <p className='half_title_caption'>{this.props.caption}</p>
