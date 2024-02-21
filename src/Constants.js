@@ -300,7 +300,7 @@ export const COUNCIL =
 
 /* Youtube embed id of the B&C promo video to be displayed on LeadershipIntro component. You can find this by clicking share,
 ** embed on the current year's video. If there isn't a video for this year leave equal to empty string ''*/
-export const B_C_YOUTUBE_EMBED_ID = 'lRoajvsa004'
+export const B_C_YOUTUBE_EMBED_ID = ''
 
 
 
@@ -319,7 +319,7 @@ export const YOUTUBE_LINK = 'https://www.youtube.com/user/uvaOYFA'
 export const TWITTER_LINK = 'https://twitter.com/oyfaatuva'
 
 /* current age in years of OYFA as well as # of B&Cs there has been */
-export const OYFA_AGE = new Date().getFullYear() - 1988 + 1;
+export const OYFA_AGE = new Date().getFullYear() - 1988;
 
 /*=================COMMON=====================================================================*/
 
@@ -331,7 +331,7 @@ export const NAVBAR_TABS = ['--logo', 'About', 'Events', 'Links', 'Leadership', 
 export const MAILCHIMP_BASE_URL = 'https://oyfaatuva.us4.list-manage.com/subscribe/post-json?u=06c31be345165e241d2affc73&amp;id=11be915f14&amp;f_id=00ad07e9f0;tag=1785772'
 
 /* Github link, used in footer */
-export const GITHUB_LINK = 'https://github.com/colbyle25/website'
+export const GITHUB_LINK = 'https://github.com/oyfaatuva/oyfa-website'
 
 /* Previous website link, used in footer */
 export const PREVIOUS_WEBSITE_LINK = ''
