@@ -3,7 +3,6 @@
 }
 
 .bio_heading{
-    font-family: 'Playfair Display';
     padding-top: 3%;
     font-size: 8em;
     font-weight: bold;
@@ -40,7 +39,6 @@
 }
 
 .bio_name{
-    font-family: 'Playfair Display';
     font-size: 3em;
     font-weight: bold;
     color: black;
@@ -48,14 +46,12 @@
 }
 
 .bio_h2{
-    font-family: 'Playfair Display';
     font-size: 2em;
     color: black;
     margin-top: 1%;
 }
 
 .bio_text{
-    font-family: 'Open Sans';
     font-size: 1.3em;
     color: black;
     margin-top: 1%;

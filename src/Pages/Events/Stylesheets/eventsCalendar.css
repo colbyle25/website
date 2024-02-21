@@ -1,19 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans');
-
-:root{
-    --off-white: #e8e5e0;
-}
-
 .events_background{
     background-color: var(--off-white);
     padding-bottom: 5%;
 }
 
 .events_heading{
-    font-family: 'Playfair Display';
+    font-family: 'Poppins';
     padding-top: 3%;
     font-size: 10vh;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -26,7 +20,6 @@
 
 .events_calendar_iframe{
     padding-top: 3%;
-    font-family: 'Playfair Display';
     width: 80%;
     height: 60vh;
 }
