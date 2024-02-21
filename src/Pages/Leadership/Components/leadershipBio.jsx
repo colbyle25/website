@@ -20,10 +20,10 @@ export default class LeadershipBio extends Component{
         return(
             <div>
                 <div className = 'bio_background'>
-                    <h1 className = 'bio_heading'>Board</h1>
+                    <h1 className = 'bio_heading'>BOARD</h1>
                     <BioGrid bioRows = {BOARD.flat(1)} />
 
-                    <h1 className = 'bio_heading'>Council</h1>
+                    <h1 className = 'bio_heading'>COUNCIL</h1>
                     <BioGrid bioRows = {COUNCIL.flat(1)} />
                 </div>
 
