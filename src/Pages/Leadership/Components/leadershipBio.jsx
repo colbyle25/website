@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import '../Stylesheets/leadershipBio.css'
-import Navbar from '../../../../Trash/navbar'
 import Footer from '../../../components/Footer/Footer'
 import {BOARD, COUNCIL} from '../../../Constants';
 
@@ -20,8 +19,6 @@ export default class LeadershipBio extends Component{
         ** with the flat(1) method to be able to use the information in our BioGrid call */
         return(
             <div>
-                <Navbar />
-
                 <div className = 'bio_background'>
                     <h1 className = 'bio_heading'>Board</h1>
                     <BioGrid bioRows = {BOARD.flat(1)} />

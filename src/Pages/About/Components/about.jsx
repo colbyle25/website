@@ -12,7 +12,7 @@ export default class About extends Component{
         return(
             <div>
                 <HalfTitle header = 'About' imgSrc = './Images/About/About_Title_Battle.jpeg'
-                brightness={80} />
+                brightness={80} position={40}/>
                 <History />
                 <Mission />
             </div>

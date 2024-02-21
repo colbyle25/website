@@ -10,11 +10,11 @@ import LeadershipIntro from './LeadershipIntro';
 export default class Leadership extends Component{
     render(){
         return(
-            <div>
-                <HalfTitle header = 'Leadership' imgSrc = './Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={55} caption='Read Bios' captionLink='/Bios'/>
+            <>
+                <HalfTitle header = 'Leadership' imgSrc = '/Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={35} caption='Read Bios' captionLink='/Bios'/>
                 <LeadershipIntro />
                 <LeadershipGallery />
-            </div>
+            </>
         )
     }
 }

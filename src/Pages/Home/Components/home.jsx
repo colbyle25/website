@@ -9,13 +9,13 @@ import Testimonies from './homeTestimonies';
 export default class Home extends Component{
     render(){
         return(
-            <div>
+            <>
                 <title>Home</title>
                 {/*TODO: Something in Introduction is overflowing and causing a white bar on the right side of mobile screens */}
                 <TitleScreen />
                 <Introduction />
                 <Testimonies />
-            </div>
+            </>
         )
     }
 }
