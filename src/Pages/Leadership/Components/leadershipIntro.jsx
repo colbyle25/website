@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../Stylesheets/LeadershipIntro.css';
-import { OYFA_AGE, B_C_YOUTUBE_EMBED_ID } from '../../../Constants';
+import { OYFA_AGE, B_C_YOUTUBE_EMBED_ID } from '/src/Constants';
 import YoutubeEmbed from '../../../components/YoutubeEmbed/YoutubeEmbed';
 
 export default class LeadershipIntro extends Component{
@@ -17,7 +17,7 @@ export default class LeadershipIntro extends Component{
 
         return(
             <div className='leadership_intro_background'>
-                <h1 className = 'leadership_heading'>{OYFA_AGE + append} Board and Council</h1>        
+                <h1 className = 'leadership_heading'>{OYFA_AGE + append} BOARD AND COUNCIL</h1>        
                 {YoutubeComponent}
             </div>
         )

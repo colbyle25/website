@@ -325,6 +325,7 @@ export const TWITTER_LINK = 'https://twitter.com/oyfaatuva'
 
 /* current age in years of OYFA as well as # of B&Cs there has been */
 export const OYFA_AGE = new Date().getFullYear() - 1988;
+export const CURRENT_BNC = 36;
 
 /*=================COMMON=====================================================================*/
 

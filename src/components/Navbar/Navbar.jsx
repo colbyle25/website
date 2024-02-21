@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from "react-responsive";
 import classes from "./Navbar.module.css";
-import useScrollPosition from "../../hooks/useScrollPosition";
+import useScrollPosition from "/src/hooks/useScrollPosition";
 
 /**
  * USAGE GUIDE: to be made... I am lazy

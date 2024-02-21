@@ -1,9 +1,11 @@
 .leadership_heading{
     padding: 2%;
+    font-family: 'Poppins';
     font-size: 16vh;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 4rem;
     text-align: center;
+    margin: 0;
 }
 
 .leadership_intro_background{
