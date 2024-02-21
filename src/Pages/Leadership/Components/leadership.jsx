@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 
+import { CURRENT_BNC } from '/src/Constants';
 import HalfTitle from '../../../components/HalfTitle/HalfTitle';
 
 import LeadershipGallery from './LeadershipGallery';
@@ -11,7 +12,7 @@ export default class Leadership extends Component{
     render(){
         return(
             <>
-                <HalfTitle header = 'Leadership' imgSrc = '/Images/Leadership/Leadership_Title_35B&C.jpeg' brightness={75} position={35} caption='Read Bios' captionLink='/Bios'/>
+                <HalfTitle header = 'Leadership' imgSrc = {'/Images/Leadership/Leadership_Title_' + CURRENT_BNC + 'B&C.jpg'} brightness={75} position={25} caption='Read Bios' captionLink='/Bios'/>
                 <LeadershipIntro />
                 <LeadershipGallery />
             </>
