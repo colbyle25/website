@@ -11,7 +11,7 @@ import useScrollPosition from "../../hooks/useScrollPosition";
  */
 
 //TODO: This should be dependant on window ;-;;;;
-const SCROLL_POSITION_FOR_TRANSITION = 450; //Scroll Position = 0 is the top of the page (is this measured in pixels??) 
+const SCROLL_POSITION_FOR_TRANSITION = 350; //Scroll Position = 0 is the top of the page (is this measured in pixels??) 
 const MAX_WIDTH = "1000px" //Maximum window width to classify screen as "Mobile"
 
 //Current navbar tabs

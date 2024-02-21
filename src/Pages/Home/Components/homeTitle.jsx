@@ -22,25 +22,41 @@ export default class TitleScreen extends Component{
         
         content.push(
             {
+                imgSrc: imgDir + '36th_BnC.jpg',
+                captionHeader: '36th Board and Council',
+                captionPara: 'Meet our leadership team',
+                link: '/leadership'
+            },
+            {
+                imgSrc: imgDir + 'gbm.jpg',
+                captionHeader: 'October General Body Meeting',
+                captionPara: 'Join our community',
+                link: 'https://www.facebook.com/groups/oyfaatuva/'
+            },
+            {
+                imgSrc: imgDir + 'oyfa_volleyball_IMs.jpg',
+                captionHeader: 'Beach Volleyball IM Team',
+                captionPara: 'Join Chilling',
+                link: 'https://www.facebook.com/groups/596905140414588/'
+            },
+            {
                 imgSrc: imgDir + 'Title_First_Year_Modern.jpeg',
                 captionHeader: '1st Year Modern, Barrio 2023',
                 captionPara: 'Watch the performance',
                 link: 'https://www.youtube.com/watch?v=zWFKvAuphp8&ab_channel=OYFAatUVA'
-            } 
-        )
-        content.push(
+            },
             {
                 imgSrc: imgDir + 'Title_Fourth_Year_Modern.jpeg',
                 captionHeader: '4th Year Modern, Barrio 2023',
                 captionPara: 'View more pictures',
                 link: 'https://uvaoyfa.myportfolio.com/oyfa-2022-2023'
-            } 
-        )        
-        //continue as you see fit
+            },
+            //continue as you see fit
+        ) 
 
         return(
-            <div className = 'w-100'>
-                {<TitleCarousel timeBeforeSwitch={timeBeforeSwitch} content = {content}/>}
+            <div>
+                <TitleCarousel timeBeforeSwitch={timeBeforeSwitch} content = {content}/>
                 <Title/>
             </div>
         )
@@ -95,7 +111,8 @@ class CarouselContent extends Component{
         return(
             <div>
                 <div className = 'title_img_container'>
-                    <img className = 'title_img' alt='Image' src={this.props.imgSrc}/>
+                    <div className='vignette'/>
+                    <img alt='Image' src={this.props.imgSrc}/>
                 </div>
                 <Carousel.Caption className = 'title_caption'>
                 <h3 className = 'title_caption_header'>{this.props.captionHeader}</h3>
