@@ -38,9 +38,9 @@ export const LINKS =
             sectionTitle: 'Announcements',
             links: 
                 [
-                    {header: 'New Member/Little Form', para: 'Stay tuned! Updating soon.', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfFcR1aBjCCLexKWykdAKzVqPkGgN0GuwfTPJm55d8GdGFcCQ/viewform'},
-                    {header: 'Returning Member/Big Form', para: 'Renew your OYFA membership and sign up for littles! Due August 21 at 11:59PM', link: 'https://forms.office.com/r/uUmenq0YaQ'},
-                    {header: 'OYFA Excellence Scholarship', para: 'The 2023 Scholarship is closed but stay tuned for 2024 school year', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfk7EZutPVbnjQcCzlXYK9H2rdDpbjVfWcS6TuAqvZs-b6NFQ/viewform'},
+                    //{header: 'New Member/Little Form', para: 'Stay tuned! Updating soon.', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfFcR1aBjCCLexKWykdAKzVqPkGgN0GuwfTPJm55d8GdGFcCQ/viewform'},
+                    //{header: 'Returning Member/Big Form', para: 'Renew your OYFA membership and sign up for littles! Due August 21 at 11:59PM', link: 'https://forms.office.com/r/uUmenq0YaQ'},
+                    {header: 'OYFA Excellence Scholarship', para: 'Calling all first years: the 2024 Scholarship is now open! Applications close March 15th, 11:59PM', link: 'https://forms.office.com/r/4CZ9SD9vZA'},
                 ]
         },
         
